@@ -12,9 +12,9 @@ Make it Home is a web-based solution to help UW students stay informed about non
 ## Features:
 - Home page: A forum for students to report non-life threatening incidents
 - Guided template when uploading posts
-- Incident type (e.g. loud noise, fire, police blockage, etc.)
-- Incident location - areas to avoid
-- Incident time - limited to the evening
-- Upvote posts to corroborate incidents
+  - Incident type (e.g. loud noise, fire, police blockage, etc.)
+  - Incident location - areas to avoid
+  - Incident time - limited to the evening
+  - Upvote posts to corroborate incidents
 - Commuting resources (Husky Night Walk, Night Ride)
 
