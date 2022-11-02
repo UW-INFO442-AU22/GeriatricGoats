@@ -6,7 +6,7 @@ Visit us at [Make it Home] (https://make-it-home.web.app/).
 ## Our Mission
 The goal of Make it Home is to address feelings of anxiety that have risen amongst University of Washington: Seattle campus students with a recent uptake in violent crime occurring around the UW neighborhood, particularly after dark. Through our application, we hope to empower students to make safer commuting choices while traversing through the UW neighborhood by allowing them to share and access timely safety-related information.
 
-With the aim of increasing safety for UW students in the University District neighborhood, Make it Home also aligns with the eleventh United Nations' Sustainable Development Goal (SDG): Sustainable Cities and Communities. This entails “making cities and human settlements inclusive, safe, resilient, and sustainable” [1]. 
+With the aim of increasing safety for UW students in the University District neighborhood, Make it Home also aligns with the eleventh United Nations Sustainable Development Goal (SDG): Sustainable Cities and Communities. This entails “making cities and human settlements inclusive, safe, resilient, and sustainable” [1]. 
 
 ## Features
 - Forum for students to report non-life threatening incidents
