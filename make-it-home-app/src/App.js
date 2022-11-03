@@ -1,12 +1,11 @@
 import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/App.css';
+
+import {Home} from './home';
 
 function App() {
-  return (
-<main>
-  <h1>hello</h1>
-</main>
-  );
+  return(<Home/>)
 }
 
 export default App;
