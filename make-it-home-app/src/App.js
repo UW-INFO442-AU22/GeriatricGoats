@@ -2,6 +2,8 @@ import logo from './logo.svg'; // feel free to change
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/App.css'; // this is world-wide css, would overwrite bootstrap 
 import { Route, Routes } from 'react-router-dom'
+
+
 // pages being imported
 import {Home} from './home';
 import {CommutingResources } from './commuting';

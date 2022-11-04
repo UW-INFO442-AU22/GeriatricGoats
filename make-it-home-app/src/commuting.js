@@ -1,13 +1,28 @@
 import React from 'react';
 import {MakeNavBar } from './functions.js';
 
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
+
 // Commuting Resources go into this page
 
 export function CommutingResources(){
     return(
         <div>
             <MakeNavBar/>
-            <h1>Commuting Resources</h1>
+            <Test yeeHaw="bbbbbb" />
+            
         </div>
     )
 }
+
+function Test(props){
+
+    const goToReturn = props.yeeHaw;
+
+    return(
+        <h1>{goToReturn}</h1>
+    )
+
+}
+
