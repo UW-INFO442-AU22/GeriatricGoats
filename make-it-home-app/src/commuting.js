@@ -1,13 +1,13 @@
 import React from 'react';
 import {MakeNavBar } from './functions.js';
 
-// This is the home page. The forum goes here.
+// Commuting Resources go into this page
 
-export function Home(){
+export function CommutingResources(){
     return(
         <div>
             <MakeNavBar/>
-            <h1>Home Page</h1>
+            <h1>Commuting Resources</h1>
         </div>
     )
 }
