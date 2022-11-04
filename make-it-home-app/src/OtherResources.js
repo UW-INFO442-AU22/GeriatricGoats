@@ -1,5 +1,5 @@
 import React from 'react';
-import {MakeNavBar } from './functions.js';
+import {MakeNavBar } from './Functions.js';
 
 // Other resources go into this page
 

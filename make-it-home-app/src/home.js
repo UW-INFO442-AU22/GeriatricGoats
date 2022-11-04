@@ -1,5 +1,5 @@
 import React from 'react';
-import {MakeNavBar, Card } from './functions.js';
+import {MakeNavBar, Card } from './Functions.js';
 
 
 // This is the home page. The forum goes here.
