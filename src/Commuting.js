@@ -10,6 +10,7 @@ export function CommutingResources() {
   return (
     <div>
       <MakeNavBar />
+      <h1>Commuting Resources</h1>
       <MakeCard
         imgLink="https://transportation.uw.edu/files/media/nightride-shuttle-inset-image.jpg"
         title="Night Ride"
