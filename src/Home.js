@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import {MakeNavBar } from './Functions.js';
 import {
     Card,
+    Row, Col,
     Button,
     Navbar,
     Nav,
@@ -19,25 +20,53 @@ export function Home(){
             <MakeNavBar/>
             <h1>Home Page</h1>
             <MakeCard/>
+            <MakeButton/>
+
         </div>
     )
 }
 
+// next steps:
 
-// This function will eventually have to be split into two differnet functions:
-// one to make the "background" card,
-//  and one to create a new "forum post" card, which injects the forum post    card into the background card 
-// This should be done when we have the "make forum post" buttom created
+// This function will create a button that once clicked, will add a new forum post.
+
+// To code this, need to read through here: https://info340.github.io/dom.html
+// On click, find BackgroundCard()'s body, and append the result of PostCard() to it
+
+function MakeButton(){
+
+    const [count, setCount] = useState(0);
+    const handleClick = function(event) {
+        console.log("clicky clicky");
+        setCount(count+1);
+    }
+
+return(
+<Button onClick={handleClick} variant="dark">+1</Button> 
+)
+}
+
+// This function needs to be split into two. 
+// One function should make the first card (the background card), BackgroundCard()
+// and the other function should be make the 'post' card, PostCard()
 function MakeCard(){
     return(
     <Card style={{ width: '50%' }}>
         <Card.Header as="h5">Night Watch Forum</Card.Header>
         <Card.Body>
             <Card style={{ width: '100%' }}>
-                <Card.Header as="h12">YEEEEEHAWWWW</Card.Header>
+                <Card.Header>YEEEEEHAWWWW</Card.Header>
                 <Card.Body>
                     <Card.Text> 
-                    Ut blanditiis voluptatem dolorem tenetur. Quo dolorum accusamus provident maiores eos. Voluptatem cum possimus sunt tenetur est ea. Assumenda nihil unde non sed minima veritatis architecto.
+                        <Container>
+                            <Row>
+                                <Col sm={9}>Ut blanditiis voluptatem dolorem tenetur. Quo dolorum accusamus provident maiores eos.</Col>
+
+                                <Col sm={2} className="d-flex justify-content-end align-items-center">
+                                    <Button variant="primary">Upvote</Button>{' '}
+                                </Col>
+                            </Row>
+                        </Container>
                     </Card.Text>
                 </Card.Body>
             </Card>
@@ -46,6 +75,3 @@ function MakeCard(){
 
   );
 }
-// make background component
-
-// make "post" component 
