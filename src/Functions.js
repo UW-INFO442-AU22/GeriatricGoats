@@ -29,10 +29,10 @@ export function MakeNavBar() {
       <Navbar.Toggle type="button" aria-controls="navbarNav"></Navbar.Toggle>
       <Navbar.Collapse id="navbarNav">
         <Nav className="navbar-nav ml-auto">
-          <Nav.Link href="/"><img src="./img/home.png" height="10em" width="20em" alt="Home icon"></img>Home</Nav.Link>
-          <Nav.Link href="forum"><img src="./img/loud-speaker.png" height="10em" width="20em" alt="Loud speaker icon"></img>Alerts</Nav.Link>
-          <Nav.Link href="commuting-resources"><img src="./img/walking.png" height="10em" width="20em" alt="Walking person icon"></img>Commute</Nav.Link>
-          <Nav.Link href="other-resources"><img src="./img/shield.png" height="10em" width="20em" alt="Safety shield icon"></img>Safety</Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="forum">Alerts</Nav.Link>
+          <Nav.Link href="commuting-resources">Commute</Nav.Link>
+          <Nav.Link href="other-resources">Safety</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
