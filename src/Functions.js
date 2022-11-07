@@ -10,6 +10,7 @@ import {
   Table,
 } from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
+import logo from './img/logo.svg';
 
 // This is the function page. Various bootstrap functions should go here
 // E.g. our custom Navbars, cards, containers, etc.
@@ -19,10 +20,10 @@ export function MakeNavBar() {
     <Navbar className="mb-4" expand="lg" variant="light" bg="light">
       <Navbar.Brand href="/">
         <img
-          src="./img/Site-logo.png"
+          src={logo}
           height="75em"
           width="180em"
-          alt="sites logo"
+          alt="Make It home logo"
         />
       </Navbar.Brand>
       <Navbar.Toggle type="button" aria-controls="navbarNav"></Navbar.Toggle>
