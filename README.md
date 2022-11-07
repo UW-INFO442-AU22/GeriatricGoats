@@ -15,7 +15,7 @@ With the aim of increasing safety for UW students in the University District nei
   - Incident location - areas to avoid
   - Incident time - limited to the evening
   - Upvote posts to corroborate incidents
-- Commuting resources (e.g., Husky Night Walk, Night Ride, etc.)
+- Commuting resources (e.g., Night Ride, Husky NightWalk, etc.)
 
 ## Developer Information
 ### Team 7: GeriatricGoats 🐐
