@@ -8,6 +8,39 @@ body {
     padding: 10px;
     background: #161B21;
     color: white;
-    font-weight: medium;
-    font-size: 1.25em;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+h1 {
+    color: white;
+    font-weight: 500;
+}
+
+p {
+    color: white;
+    font-weight: 300;
+}
+
+.footer-text {
+    color: #677189;
+    font-weight: 300;
+}
+
+/* Cards */
+.card {
+    background-color: #161B21;
+}
+
+.card-title {
+    color: white;
+}
+
+/* Buttons */
+.mint-btn {
+    background-color: #D6E4E2;
+    color: #294642;
+    font-weight: 500;
+    width: 8em;
+    border-radius: 20px;
 }
