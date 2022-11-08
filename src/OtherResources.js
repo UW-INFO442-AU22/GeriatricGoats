@@ -22,11 +22,13 @@ export function OtherResources() {
         imgLink={safecampusImg}
         title="UW SafeCampus"
         description="SafeCampus is UW’s violence-prevention and response program, and can help you navigate many situations, whether they impact you or someone you know — including threats, stalking, sexual assault, relationship violence, harassment, suicide concerns, workplace violence and more. Call them at 206-685-7233 Monday – Friday, 8 am – 5 pm."
+        resourceLink="https://www.washington.edu/safecampus/"
       />
       <MakeCard
         imgLink= {uwalertImg}
         title="UW Alerts"
         description="To stay informed about emergencies on campus, sign up for UW Alert, which is a tool that disseminates alert notices to students, faculty and staff if there are ever emergencies or activities that may disrupt normal campus operations."
+        resourceLink="https://www.washington.edu/safety/alert/"
       />
     </div>
   );

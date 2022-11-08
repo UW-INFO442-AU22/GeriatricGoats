@@ -46,7 +46,7 @@ export function MakeCard(props) {
       <Card.Body className="card">
         <Card.Title className="card-title">{props.title}</Card.Title>
         <Card.Text>{props.description}</Card.Text>
-        <Button className="mint-btn" variant="primary">Learn More</Button>
+        <Button href={props.resourceLink} className="mint-btn" target="_blank">Learn More</Button>
       </Card.Body>
     </Card>
   );
