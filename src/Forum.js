@@ -18,7 +18,7 @@ export function Forum(){
     return(
         <div>
             <MakeNavBar/>
-            <h1>Forum Page</h1>
+
             <CardApp/>
         </div>
     )
@@ -28,16 +28,21 @@ export function Forum(){
 // CardApp takes in both MakeCard and MakePost just so the data can be shared
 function CardApp(){
     const [postList, setPostList] = useState([]);
-  
+
+  // event that happens when add post button is clicked
     const clicked = event => {
-      setPostList(postList.concat(<MakePost key={postList.length} />));
+      setPostList(postList.concat(      
+      <MakePost key={postList.length} />));
     };
-  
+  // some css work needs to be done in this return statement to make it look like the figma prototypes (: 
     return (
-      <div>
-        <MakeCard posts={postList}/>
-        <Button onClick={clicked}>Add input</Button>
-      </div>
+        
+<div class="container">
+    <h1>Forum Page</h1>
+    <Button onClick={clicked}>+</Button>      
+    <MakeCard posts={postList}/>
+
+</div>
     );
 }
   
