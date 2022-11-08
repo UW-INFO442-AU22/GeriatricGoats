@@ -12,37 +12,53 @@ import {
     Table,
   } from "react-bootstrap";
 
-// This is the forum page. The forum goes here.
+// This is the forum page
 
 export function Forum(){
     return(
         <div>
             <MakeNavBar/>
             <h1>Forum Page</h1>
-            <MakeButton/>
+            <CardApp/>
         </div>
     )
 }
 
+
+// CardApp takes in both MakeCard and MakePost just so the data can be shared
+function CardApp(){
+    const [postList, setPostList] = useState([]);
   
-// Render button, attach post functionality
-function MakeButton(){
-
-    const [count, setCount] = useState([]);
-    const handleClick = function(event) {
-        setCount(<MakePost/>)
-        console.log(count);
-    }
-
-return(
-    <span>
-    <MakeCard posts={count}/>
-    <Button onClick={handleClick} variant="dark">+1</Button> 
-    </span>
-
-)
+    const clicked = event => {
+      setPostList(postList.concat(<MakePost key={postList.length} />));
+    };
+  
+    return (
+      <div>
+        <MakeCard posts={postList}/>
+        <Button onClick={clicked}>Add input</Button>
+      </div>
+    );
 }
+  
 
+  // posts are attached here
+  // parent component 
+function MakeCard(props){
+    const posts = props.posts;
+    return(
+ 
+     <Card style={{ width: '50%' }}>
+         <Card.Header as="h5">Night Watch Forum</Card.Header>
+         <Card.Body>
+            {posts}
+         </Card.Body>
+     </Card>
+ 
+   );
+ 
+   
+ }
 
 // Make post
 // Child component
@@ -69,20 +85,3 @@ function MakePost(){
 );
 }
 
-// Post will be attached here, parent component
-function MakeCard(props){
-
-   const posts = props.posts;
-
-   const postsArray = [];
-    return(
-
-    <Card style={{ width: '50%' }}>
-        <Card.Header as="h5">Night Watch Forum</Card.Header>
-        <Card.Body>
-          {posts}
-        </Card.Body>
-    </Card>
-
-  );
-}
