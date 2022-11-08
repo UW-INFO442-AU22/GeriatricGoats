@@ -17,14 +17,10 @@ import logo from './img/logo.svg';
 
 export function MakeNavBar() {
   return (
-    <Navbar className="mb-4" expand="lg" variant="light" bg="light">
+    <Navbar className="color-nav" variant="dark">
       <Navbar.Brand href="/">
-        <img
-          src={logo}
-          height="75em"
-          width="180em"
-          alt="Make It Home logo"
-        />
+        <img src={logo} height="50em" width="80em" alt="Make It Home logo" />
+        make it home
       </Navbar.Brand>
       <Navbar.Toggle type="button" aria-controls="navbarNav"></Navbar.Toggle>
       <Navbar.Collapse id="navbarNav">

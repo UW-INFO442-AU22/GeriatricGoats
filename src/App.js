@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/App.css"; // this is world-wide css, would overwrite bootstrap
 import { Route, Routes } from "react-router-dom";
-import Header from "./Header";
+import Header from "./Header"; // keep if sidebar menu is implemented
 import { Footer } from "./Footer";
 
 // pages being imported
@@ -13,7 +13,7 @@ import { OtherResources } from "./OtherResources";
 export function App() {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="forum" element={<Forum />} />

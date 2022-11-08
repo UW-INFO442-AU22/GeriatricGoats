@@ -4,14 +4,6 @@ body {
     background-color: black;
 }
 
-.header {
-    padding: 10px;
-    background: #161B21;
-    color: white;
-    font-weight: 400;
-    font-size: 1.2em;
-}
-
 h1 {
     color: white;
     font-weight: 500;
@@ -22,6 +14,21 @@ p {
     font-weight: 300;
 }
 
+/* Header */
+.header {
+    padding: 10px;
+    background: #161B21;
+    color: white;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+/* Navigation bar */
+.color-nav {
+    background-color: #161B21;
+}
+
+/* Footer */
 .footer-text {
     color: #677189;
     font-weight: 300;
