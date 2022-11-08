@@ -45,3 +45,7 @@ p {
     border-radius: 20px;
 }
 
+iframe {
+    display: block;
+    margin: auto;
+}

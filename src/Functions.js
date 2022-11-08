@@ -41,7 +41,7 @@ export function MakeNavBar() {
 
 export function MakeCard(props) {
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '25rem' }}>
       <Card.Img variant="top" src={props.imgLink} />
       <Card.Body className="card">
         <Card.Title className="card-title">{props.title}</Card.Title>

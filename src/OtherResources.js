@@ -21,8 +21,9 @@ export function OtherResources() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
+        
         <div class="row">
-          <div class="col-col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4">
             <MakeCard
               imgLink={safecampusImg}
               title="UW SafeCampus"
@@ -49,8 +50,6 @@ export function OtherResources() {
             />
           </div>
         </div>
-
-
       </div>
     </div>
   );
