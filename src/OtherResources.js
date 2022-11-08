@@ -2,6 +2,7 @@ import React from "react";
 import { MakeNavBar, MakeCard } from "./Functions.js";
 import safecampusImg from "./img/safecampus.jpg";
 import uwalertImg from "./img/uwalert.png"
+import uwPDImg from "./img/uwpd.jpeg";
 // Other resources go into this page
 
 export function OtherResources() {
@@ -29,6 +30,13 @@ export function OtherResources() {
         title="UW Alerts"
         description="To stay informed about emergencies on campus, sign up for UW Alert, which is a tool that disseminates alert notices to students, faculty and staff if there are ever emergencies or activities that may disrupt normal campus operations."
         resourceLink="https://www.washington.edu/safety/alert/"
+      />
+      <MakeCard
+        imgLink= {uwPDImg}
+        title="UW Police"
+        description="To report non-emergencies, contact: 206.685.UWPD (8973).
+        To report anonymous tips, contact: 206.685.TIPS (8477)"
+        resourceLink="https://police.uw.edu/services/"
       />
     </div>
   );
