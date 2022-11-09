@@ -5,13 +5,13 @@ import uwalertImg from "./img/uwalert.png"
 import uwPDImg from "./img/uwpd.jpeg";
 // Other resources go into this page
 
-export function OtherResources() {
+export function Safety() {
   return (
     <div>
       <MakeNavBar />
       <div class="container">
 
-        <h1>Other Resources</h1>
+        <h1>Safety</h1>
         <iframe
           width="560"
           height="315"

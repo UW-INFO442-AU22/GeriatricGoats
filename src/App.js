@@ -6,9 +6,9 @@ import { Footer } from "./Footer";
 
 // pages being imported
 import { Home } from "./Home";
-import { Forum } from "./Forum";
-import { CommutingResources } from "./Commuting";
-import { OtherResources } from "./OtherResources";
+import { Alerts } from "./Alerts";
+import { Commute } from "./Commute";
+import { Safety } from "./Safety";
 
 export function App() {
   return (
@@ -16,9 +16,9 @@ export function App() {
       {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="forum" element={<Forum />} />
-        <Route path="commuting-resources" element={<CommutingResources />} />
-        <Route path="other-resources" element={<OtherResources />} />
+        <Route path="alerts" element={<Alerts />} />
+        <Route path="commute" element={<Commute />} />
+        <Route path="safety" element={<Safety />} />
       </Routes>
       <Footer />
     </div>

@@ -12,9 +12,8 @@ import {
     Table,
   } from "react-bootstrap";
 
-// This is the forum page
-
-export function Forum(){
+// Forum page
+export function Alerts(){
     return(
         <div>
             <MakeNavBar/>
@@ -38,7 +37,7 @@ function CardApp(){
     return (
         
 <div class="container">
-    <h1>Forum Page</h1>
+    <h1>Alerts</h1>
     <Button onClick={clicked}>+</Button>      
     <MakeCard posts={postList}/>
 

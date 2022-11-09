@@ -8,13 +8,13 @@ import ListGroup from "react-bootstrap/ListGroup";
 
 // Commuting Resources go into this page
 
-export function CommutingResources() {
+export function Commute() {
   return (
     <div>
       <MakeNavBar />
       <div class="container">
 
-        <h1>Commuting Resources</h1>
+        <h1>Commute</h1>
         <div class="row">
           <div class="col-12 col-md-6 col-lg-6">
             <MakeCard
