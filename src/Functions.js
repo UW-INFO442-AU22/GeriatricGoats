@@ -26,9 +26,9 @@ export function MakeNavBar() {
       <Navbar.Collapse id="navbarNav">
         <Nav className="navbar-nav ml-auto">
           <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="forum">Alerts</Nav.Link>
-          <Nav.Link href="commuting-resources">Commute</Nav.Link>
-          <Nav.Link href="other-resources">Safety</Nav.Link>
+          <Nav.Link href="alerts">Alerts</Nav.Link>
+          <Nav.Link href="commute">Commute</Nav.Link>
+          <Nav.Link href="safety">Safety</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
