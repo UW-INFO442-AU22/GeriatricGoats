@@ -5,6 +5,7 @@ import {
     Row, Col,
     Button,
     Navbar,
+    Modal,
     Nav,
     Container,
     Form,
@@ -25,9 +26,69 @@ export function Alerts(){
     )
 }
 
+
+// pop-up
+function MakeForm() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  return (
+    <>
+      <Button variant="primary" onClick={handleShow}>
+        Launch demo modal
+      </Button>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Create a new forum post</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          
+        <Form>
+        <Form.Group className="mb-3" controlId="formInput">
+          <Form.Label>Title</Form.Label>
+          <Form.Control type="text" placeholder="Verbal altercation on the ave by Thai Tom " />
+          <Form.Text className="text-muted">
+            Try and be as descriptive as you can!
+          </Form.Text>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formInput">
+          <Form.Label>Type of incident</Form.Label>
+          <Form.Select type="text" placeholder="Crime">
+          <option>Crime</option>
+          <option>Heads up!</option>
+          <option>Beep boop</option>
+          </Form.Select>
+
+
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formInput">
+          <Form.Label>Location</Form.Label>
+          <Form.Control type="text" placeholder="University Way NE" />
+        </Form.Group>
+        </Form>
+
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Post
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
+}
+
+
+
 // this will be the form that populates post data
 // need css on container for background
-function MakeForm(){
+function ExampleForm(){
     return(
         <Container >
         <Form>
@@ -46,9 +107,7 @@ function MakeForm(){
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Check me out" />
         </Form.Group>
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
+
       </Form>
       </Container>
     )
@@ -63,7 +122,6 @@ function CardApp(){
       setPostList(postList.concat(      
       <MakePost key={postList.length} />));
     };
-  // some css work needs to be done in this return statement to make it look like the figma prototypes (: 
     return (
         
 <div class="container">
@@ -75,9 +133,6 @@ function CardApp(){
 </div>
     );
 }
-  
-
-
 
   // posts are attached here
   // parent component 
@@ -95,10 +150,8 @@ function MakeCard(props){
    );
  }
 
-// Make post
+// Make Post component
 // Child component
-
-// spacing of columns needs to be fixed (button)
 function MakePost(){
     return( 
         <div>
