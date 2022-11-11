@@ -6,19 +6,16 @@ export function Home() {
     return (
         <div>
             <MakeNavBar />
-            <main className='container'>
-                <section className='section container'>
+            <div className='big-image'>
+                <div className='overlay'>
                     <h1>Stay Informed, Play It Safe, Make It Home.</h1>
                     <p>
-                        Make It Home is a web-based solution helping University of Washington students stay informed about non-life threatening incidents near and around campus during nighttime. Through this platform, students can access real-time reports and resources to make safe commuting decisions.
+                        Make It Home helps University of Washington students stay informed about non-life threatening incidents near and around campus during nighttime by providing real-time reports and resources to make safe commuting decisions.
                     </p>
-                </section>
-                <div>
-                    <figure>
-                        <img src="./img/suzzallo-monochrome.jpeg" alt="Suzzallo library at night"></img>
-                    </figure>
                 </div>
-                {/* <div>
+            </div>
+
+            {/* <div>
                 <section className='hero container'>
                     <h1>Our Mission</h1>
                     <p className='home-text'>
@@ -26,7 +23,6 @@ export function Home() {
                     </p>
                 </section>
                 </div> */}
-            </main>
         </div>
     )
 }
