@@ -16,8 +16,19 @@ With the aim of increasing safety for UW students in the University District nei
   - Incident time - limited to the evening
   - Upvote posts to corroborate incidents
 - Commuting resources (e.g., Night Ride, Husky NightWalk, etc.)
+- General safety resources for students
 
-## Developer Information
+# Developer Information
+## Built With
+- React JS
+- Bootstrap
+- Firebase
+
+## Build Instructions
+- `npm install`
+- `npm start`
+
+## Development Team
 ### Team 7: GeriatricGoats 🐐
 - Jennifer Do
 - Stella Kim
@@ -25,5 +36,5 @@ With the aim of increasing safety for UW students in the University District nei
 - Cassie Nguyen
 - Thomas Wilson
 
-## References
+# References
 [1] The United Nations. (n.d.). Cities - United Nations Sustainable Development Action 2015. United Nations Sustainable Development. Retrieved October 11, 2022, from https://www.un.org/sustainabledevelopment/cities/.
