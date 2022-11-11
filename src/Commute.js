@@ -11,7 +11,6 @@ import ListGroup from "react-bootstrap/ListGroup";
 export function Commute() {
   return (
     <div>
-      <MakeNavBar />
       <div class="container">
 
         <h1>Commute</h1>

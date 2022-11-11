@@ -1,0 +1,17 @@
+/* CSS used only for navigation bar */
+.color-nav {
+    background-color: #161B21;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    padding-right: 4em;
+}
+
+.navbar-brand {
+    padding-left: 4em;
+}
+
+.navbar-brand img {
+    margin-right: 1em;
+}

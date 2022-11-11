@@ -14,20 +14,6 @@ p {
     font-weight: 300;
 }
 
-/* Header */
-.header {
-    padding: 10px;
-    background: #161B21;
-    color: white;
-    font-weight: 400;
-    font-size: 1.2em;
-}
-
-/* Navigation bar */
-.color-nav {
-    background-color: #161B21;
-}
-
 /* Cards */
 .card {
     background-color: #161B21;

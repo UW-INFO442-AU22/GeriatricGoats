@@ -5,7 +5,6 @@ import './Home.css';
 export function Home() {
     return (
         <div>
-            <MakeNavBar />
             <div className='big-image'>
                 <div className='overlay'>
                     <h1>Stay Informed, Play It Safe, Make It Home.</h1>

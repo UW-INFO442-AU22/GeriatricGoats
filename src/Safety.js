@@ -8,7 +8,6 @@ import uwPDImg from "./img/uwpd.jpeg";
 export function Safety() {
   return (
     <div>
-      <MakeNavBar />
       <div class="container">
 
         <h1>Safety</h1>

@@ -19,7 +19,6 @@ import {
 export function Alerts(){
     return(
         <div>
-            <MakeNavBar/>
             <CardApp/>
             <MakeForm/>
         </div>
