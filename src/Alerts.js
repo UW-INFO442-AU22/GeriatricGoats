@@ -1,12 +1,9 @@
 import React, { useState }  from 'react';
-import {MakeNavBar } from './Functions.js';
 import {
     Card,
     Row, Col,
     Button,
-    Navbar,
     Modal,
-    Nav,
     Container,
     Form,
     Dropdown,
@@ -14,6 +11,7 @@ import {
     Table,
     Badge
   } from "react-bootstrap";
+  import "./Alerts.css";
 
 // Forum page
 export function Alerts(){

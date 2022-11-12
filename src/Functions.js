@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Card,
-  Button,
-  Container,
-  Dropdown,
-  DropdownButton,
-  Table,
-} from "react-bootstrap";
-import ListGroup from "react-bootstrap/ListGroup";
-import logo from './img/logo.svg';
+import { Card, Button } from "react-bootstrap";
 
 // This is the function page. Various bootstrap functions should go here
 // E.g. our custom Navbars, cards, containers, etc.

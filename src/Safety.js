@@ -1,9 +1,10 @@
-import React from "react";
-import { MakeNavBar, MakeCard } from "./Functions.js";
+import { MakeCard } from "./Functions.js";
+import "./Safety.css";
 import safecampusImg from "./img/safecampus.jpg";
 import uwalertImg from "./img/uwalert.png"
 import uwPDImg from "./img/uwpd.jpeg";
-// Other resources go into this page
+
+// Other general safety resources page
 
 export function Safety() {
   return (
@@ -11,6 +12,7 @@ export function Safety() {
       <div class="container">
 
         <h1>Safety</h1>
+        <p>Write brief description about page content</p>
         <iframe
           width="560"
           height="315"

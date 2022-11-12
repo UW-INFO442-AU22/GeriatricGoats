@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 
 // Home page
+
 export function Home() {
     return (
         <div>

@@ -1,12 +1,9 @@
-import React from "react";
-import { MakeNavBar, MakeCard } from "./Functions.js";
+import { MakeCard } from "./Functions.js";
+import "./Commute.css";
 import nightrideImg from "./img/nightride.jpg"
 import nightwalkImg from "./img/nightwalk.jpg"
 
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
-
-// Commuting Resources go into this page
+// Commuting resources page
 
 export function Commute() {
   return (
@@ -14,6 +11,7 @@ export function Commute() {
       <div class="container">
 
         <h1>Commute</h1>
+        <p>Write brief description about page content</p>
         <div class="row">
           <div class="col-12 col-md-6 col-lg-6">
             <MakeCard
