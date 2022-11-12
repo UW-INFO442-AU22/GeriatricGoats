@@ -15,8 +15,7 @@ import {
 import "./css/Alerts.css";
 import loudSpeaker from "./img/loud-speaker.png"
 
-// Forum page
-
+// Alerts() renders the entire forum page, it is being called in App.js
 export function Alerts() {
   return (
     <div>
@@ -27,15 +26,15 @@ export function Alerts() {
         </div>
         <p>Write brief description about page content</p>
       </div>
-      <CardApp />
       <MakeForm />
     </div>
   )
 }
 
 
-// pop-up with form
-// sends data to MakePost()
+//MakeForm() creates the pop-up with the form, and it sends the data to MakePost() to populate the post information.
+// It calls CardApp() which hosts the "Alert Hub", where posts are. It does this so it can send data.
+
 function MakeForm() {
   // these are things to deal with closing, showing the popup
   const [show, setShow] = useState(false);
@@ -46,13 +45,14 @@ function MakeForm() {
   const [titleValue, setTitleValue] = useState('')
   const [incidentValue, setIncidentValue] = useState('')
   const [locationValue, setLocationValue] = useState('')
+
   // if there's a new input on a form,
   // then set the accompaning useState with the inputted value 
   const handleChange = (event) => {
-      // get form which was updated..
+
       let newValue = event.target.value
+      // get form which was updated..
     if(event.target.id == 'titleInput'){
-      
       setTitleValue(newValue);
     }
     else if(event.target.id == 'incidentInput'){
@@ -67,6 +67,7 @@ function MakeForm() {
 
   return (
     <>
+        <CardApp title={titleValue} location={locationValue} incident={incidentValue} />
       <Button variant="primary" onClick={handleShow}>
         Launch demo modal
       </Button>
@@ -115,20 +116,28 @@ function MakeForm() {
           </Button>
         </Modal.Footer>
       </Modal>
+
     </>
+    
+
   );
 }
 
 
-
 // CardApp takes in both MakeCard and MakePost just so the data can be shared
-function CardApp() {
+function CardApp(props) {
+
+  // props are taken in from  MakeForm(), used to populate forum posts
+  const title = props.title;
+  const location = props.location;
+  const incident = props.incident;
+  // used to track how many posts there are
   const [postList, setPostList] = useState([]);
 
   // event that happens when add post button is clicked
   const clicked = event => {
     setPostList(postList.concat(
-      <MakePost key={postList.length} />));
+      <MakePost key={postList.length} title={title} location={location} incident={incident} />));
   };
   return (
 
@@ -145,6 +154,7 @@ function CardApp() {
 // posts are attached here (basically just a dark container)
 // parent component to MakePost
 function MakeCard(props) {
+ 
   const posts = props.posts;
   // <Card.Header as="h5">Night Watch Forum</Card.Header>
   return (
@@ -160,7 +170,14 @@ function MakeCard(props) {
 
 // Post component
 // Child component to MakeCard
-function MakePost() {
+function MakePost(props) {
+
+  const title = props.title;
+  const location = props.location;
+  const incident = props.incident;
+
+  console.log(title);
+
   return (
     <div>
       <Card style={{ width: '100%' }}>
@@ -170,12 +187,13 @@ function MakePost() {
             <Container>
               <Row>
                 <h4>
-                  Report of attempted buglary on the ave <Badge bg="secondary">crime</Badge>
+                  {title}
+                  <Badge bg="secondary">{incident}</Badge>
                 </h4>
               </Row>
               <Row>
                 <h5>
-                  University Way NE • Seattle
+                  {location} • Seattle
                 </h5>
               </Row>
               <Row>
