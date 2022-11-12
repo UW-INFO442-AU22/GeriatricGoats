@@ -1,1 +1,37 @@
 /* CSS used only for Commute page */
+.header-container, .cards-container {
+   margin: 100px;
+}
+
+.header-container h1 {
+   font-size: 3em;
+   font-weight: 700;
+}
+
+.header-container p {
+   font-size: 20px;
+   font-weight: 200;
+}
+
+.page-header {
+   display: inline-block;
+   margin-bottom: 30px;
+}
+
+.page-header img {
+   float: left;
+}
+
+.page-header h1 {
+   margin-left: 10px;
+}
+
+.page-header img, .page-header h1 {
+   display: inline;
+}
+
+@media screen and (min-width: 820px) {
+   .header-container, .cards-container {
+      margin: 100px 160px;
+   }
+}

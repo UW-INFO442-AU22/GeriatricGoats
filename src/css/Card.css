@@ -1,0 +1,45 @@
+.resource-card {
+    border-radius: 5px;
+    height: 450px;
+}
+
+.card-img {
+    height: 450px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 5px;
+}
+
+.card-title {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 20px 10px;
+}
+
+.card-text {
+    font-weight: 200;
+    margin: 20px 10px;
+}
+
+.card .btn-primary {
+    color: #161B21;
+    background-color: #F6FF81;
+    border-color: #F6FF81;
+    border-radius: 50px;
+    margin: 20px 10px;
+}
+
+.card .btn-primary:hover {
+    color: #161B21;
+    background-color: #c2c965;
+    border-color: #c2c965;
+}

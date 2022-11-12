@@ -22,17 +22,3 @@ p {
 .card-title {
     color: white;
 }
-
-/* Buttons */
-.mint-btn {
-    background-color: #D6E4E2;
-    color: #294642;
-    font-weight: 500;
-    width: 8em;
-    border-radius: 20px;
-}
-
-iframe {
-    display: block;
-    margin: auto;
-}
