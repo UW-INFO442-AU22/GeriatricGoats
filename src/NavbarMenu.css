@@ -1,35 +1,26 @@
 /* CSS used only for navigation bar */
 .color-nav {
-    background-color: #161B21;
-}
-
-.navbar-brand {
-    padding-left: 1em;
+   background-color: #161B21;
 }
 
 .navbar-brand img {
-    height: 45px;
-    width: 45px;
-    margin-right: 0.7em;
+   height: 45px;
+   width: 45px;
+   margin-right: 0.7em;
 }
 
 .navbar-brand .logo-text {
-    font-size: large;
+   font-size: large;
 }
 
 .navbar-nav {
-    margin-left: auto;
-    padding-right: 1em;
+   margin-left: auto;
+   padding-right: 4em;
 }
 
 /* Responsive styling */
 @media screen and (min-width: 820px) {
-    .navbar-brand {
-        padding-left: 4em;
-    }
-
-    .navbar-nav {
-        margin-left: auto;
-        padding-right: 4em;
-    }
+   .navbar-brand {
+      padding-left: 3em;
+   }
 }
