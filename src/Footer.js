@@ -6,10 +6,10 @@ import logo from "./img/logo.svg";
 function Footer() {
    return (
       <footer className="footer">
-         <p>
-            <img src={logo} height="30em" width="50em" alt="Make It home logo" />
-            &copy; 2022 UW INFO 442 Team 7: GeriatricGoats • All rights reserved
-         </p>
+         <div className="footer-items">
+            <img src={logo} alt="Make It home logo" />
+            <span>&copy; 2022 UW INFO 442 Team 7: GeriatricGoats • All rights reserved</span>
+         </div>
       </footer>
    )
 }

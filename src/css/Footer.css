@@ -1,11 +1,20 @@
 /* Footer */
 .footer {
-    padding: 1.5em 0 0.5em 0;
+    padding: 1.5em 0 1.5em 0;
     background-color: #161B21;
 }
 
-.footer p {
+.footer-items {
+    text-align: center;
+}
+
+.footer span {
     font-weight: 300;
     color: #677189;
-    text-align: center;
+}
+
+.footer img {
+    height: 30px;
+    width: 30px;
+    margin-right: 1em;
 }
