@@ -2,15 +2,12 @@ import React, { useState } from 'react';
 import {
   Card,
   Row,
-  Col,
-  Button,
   Modal,
   Container,
   Form,
-  Dropdown,
-  DropdownButton,
-  Table,
-  Badge
+  Button,
+  Badge,
+  Stack
 } from "react-bootstrap";
 import "./css/Alerts.css";
 import loudSpeaker from "./img/loud-speaker.png"
@@ -27,6 +24,7 @@ export function Alerts() {
         <p>Write brief description about page content</p>
       </div>
       <MakeForm />
+      <br/>
     </div>
   )
 }
@@ -64,13 +62,33 @@ function MakeForm() {
    }
 
 }
+  // usestate that is an array and holds the posts
+    const [postList, setPostList] = useState([]);
 
+      // event that happens when add post button is clicked
+      // sends form data to be MakePost 
+const clicked = event => {
+
+    setPostList(postList.concat(
+      <MakePost key={postList.length} title={titleValue} location={locationValue} incident={incidentValue} />));
+};
+        
+// returns title, MakeCard (parent component of posts, takes in postList), and button to make new post
+// also renders the Modal (popup with forum)
   return (
     <>
-        <CardApp title={titleValue} location={locationValue} incident={incidentValue} />
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+    <Stack gap={2} className="col-md-10 mx-auto">
+    <h1 >Alert Hub</h1>
+      <Button variant="secondary" onClick={handleShow}>
+        Make a new post 
       </Button>
+      <MakeCard posts={postList} />
+    </Stack>
+
+
+
+
+
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -83,13 +101,12 @@ function MakeForm() {
               <Form.Label>Title</Form.Label>
               <Form.Control type="text" placeholder="Verbal altercation on the ave by Thai Tom" onChange={handleChange} value={titleValue}  />
               <Form.Text className="text-muted">
-                {titleValue}
                 Try and be as descriptive as you can!
               </Form.Text>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="incidentInput">
-              <Form.Label>Type of incident {incidentValue}</Form.Label>
+              <Form.Label>Type of incident</Form.Label>
               <Form.Select type="text" placeholder="Crime" onChange={handleChange} value={incidentValue}>
                 <option>Crime</option>
                 <option>Heads up!</option>
@@ -98,7 +115,7 @@ function MakeForm() {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="locationInput">
-              <Form.Label>Location {locationValue}</Form.Label>
+              <Form.Label>Location</Form.Label>
               <Form.Control type="text" placeholder="University Way NE" onChange={handleChange} value={locationValue}  />
 
             </Form.Group>
@@ -111,45 +128,19 @@ function MakeForm() {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+        <Button variant="secondary" onClick={() => {
+          handleClose();
+          clicked();
+        }}>
             Post
           </Button>
         </Modal.Footer>
       </Modal>
-
     </>
     
-
   );
 }
 
-
-// CardApp takes in both MakeCard and MakePost just so the data can be shared
-function CardApp(props) {
-
-  // props are taken in from  MakeForm(), used to populate forum posts
-  const title = props.title;
-  const location = props.location;
-  const incident = props.incident;
-  // used to track how many posts there are
-  const [postList, setPostList] = useState([]);
-
-  // event that happens when add post button is clicked
-  const clicked = event => {
-    setPostList(postList.concat(
-      <MakePost key={postList.length} title={title} location={location} incident={incident} />));
-  };
-  return (
-
-    <div class="container">
-
-      <Button onClick={clicked} variant="secondary">Create a new post </Button>
-      <h1 >Alert Hub</h1>
-      <MakeCard posts={postList} />
-
-    </div>
-  );
-}
 
 // posts are attached here (basically just a dark container)
 // parent component to MakePost
@@ -160,7 +151,10 @@ function MakeCard(props) {
   return (
     <Card bg="dark" style={{ width: '100%' }}>
       <Card.Body>
+        <Stack gap={3} className="col-md-12 mx-auto">
         {posts}
+        </Stack>
+
       </Card.Body>
     </Card>
 
@@ -193,7 +187,7 @@ function MakePost(props) {
               </Row>
               <Row>
                 <h5>
-                  {location} • Seattle
+                  {location}
                 </h5>
               </Row>
               <Row>
