@@ -1,5 +1,5 @@
 /* CSS used only for home page */
-.big-image {
+.hero-image {
     height: 100vh;
     width: 100vw;
     position: relative;
@@ -26,19 +26,40 @@
 .overlay h1,
 .overlay p {
     max-width: 400px;
-    padding: 1em 0em;
 }
 
 .overlay h1 {
     font-size: 3em;
     font-weight: 700;
+    margin: 0 0 1em 0;
 }
 
 .overlay p {
     font-size: 1.2em;
     font-weight: 200;
-    color: white;
     line-height: 1.8em;
+    color: white;
+    margin: 0 0 3em 0;
+}
+
+.overlay .btn {
+    margin: 0;
+    border-radius: 50px;
+}
+
+.overlay .btn.outline {
+    background: none;
+    padding: 12px 22px;
+}
+
+.overlay .btn-primary.outline {
+    border: 2px solid #F6FF81;
+    color: #F6FF81;
+}
+
+.btn-primary.outline:hover {
+    color: #161B21;
+    background-color: #F6FF81;
 }
 
 /* Responsive styling */
@@ -46,16 +67,20 @@
 
     .overlay h1,
     .overlay p {
-        max-width: 900px;
-        padding: 0em;
+        max-width: 1000px;
     }
 
     .overlay h1 {
         font-size: 4em;
-        padding-bottom: 0.5em;
+        margin: 0;
     }
 
     .overlay p {
         font-size: 1.3em;
+        margin: 1em 0;
+    }
+
+    .overlay .btn {
+        margin: 2em 0;
     }
 }

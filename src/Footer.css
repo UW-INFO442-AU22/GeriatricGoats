@@ -1,4 +1,9 @@
 /* Footer */
+.footer {
+    padding: 1.5em 0 0.5em 0;
+    background-color: #161B21;
+}
+
 .footer p {
     font-weight: 300;
     color: #677189;

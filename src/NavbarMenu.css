@@ -3,15 +3,33 @@
     background-color: #161B21;
 }
 
-.navbar-nav {
-    margin-left: auto;
-    padding-right: 4em;
-}
-
 .navbar-brand {
-    padding-left: 4em;
+    padding-left: 1em;
 }
 
 .navbar-brand img {
-    margin-right: 1em;
+    height: 45px;
+    width: 45px;
+    margin-right: 0.7em;
+}
+
+.navbar-brand .logo-text {
+    font-size: large;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    padding-right: 1em;
+}
+
+/* Responsive styling */
+@media screen and (min-width: 820px) {
+    .navbar-brand {
+        padding-left: 4em;
+    }
+
+    .navbar-nav {
+        margin-left: auto;
+        padding-right: 4em;
+    }
 }

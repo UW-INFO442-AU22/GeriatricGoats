@@ -1,10 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./css/App.css"; // this is world-wide css, would overwrite bootstrap
+import "./css/App.css"; // Global css overwriting bootstrap
 import { Route, Routes } from "react-router-dom";
-import NavbarMenu from './NavbarMenu';
+import NavbarMenu from "./NavbarMenu";
 import Footer from "./Footer";
-
-// pages being imported
 import { Home } from "./Home";
 import { Alerts } from "./Alerts";
 import { Commute } from "./Commute";
