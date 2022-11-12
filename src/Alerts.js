@@ -1,7 +1,8 @@
 import React, { useState }  from 'react';
 import {
     Card,
-    Row, Col,
+    Row,
+    Col,
     Button,
     Modal,
     Container,
@@ -11,7 +12,7 @@ import {
     Table,
     Badge
   } from "react-bootstrap";
-  import "./Alerts.css";
+  import "./css/Alerts.css";
 
 // Forum page
 export function Alerts(){

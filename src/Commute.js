@@ -1,5 +1,5 @@
 import { MakeCard } from "./Functions.js";
-import "./Commute.css";
+import "./css/Commute.css";
 import nightrideImg from "./img/nightride.jpg"
 import nightwalkImg from "./img/nightwalk.jpg"
 

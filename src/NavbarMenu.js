@@ -1,5 +1,5 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
-import "./NavbarMenu.css";
+import "./css/NavbarMenu.css";
 import logo from "./img/logo.svg";
 
 // Navigation menu at the top of every page

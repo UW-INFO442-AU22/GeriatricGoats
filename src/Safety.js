@@ -1,5 +1,5 @@
 import { MakeCard } from "./Functions.js";
-import "./Safety.css";
+import "./css/Safety.css";
 import safecampusImg from "./img/safecampus.jpg";
 import uwalertImg from "./img/uwalert.png"
 import uwPDImg from "./img/uwpd.jpeg";

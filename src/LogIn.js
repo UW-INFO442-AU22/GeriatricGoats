@@ -1,4 +1,4 @@
-import "./LogIn.css";
+import "./css/LogIn.css";
 
 // Log in page
 

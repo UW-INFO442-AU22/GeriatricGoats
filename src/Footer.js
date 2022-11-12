@@ -1,4 +1,4 @@
-import "./Footer.css";
+import "./css/Footer.css";
 import logo from "./img/logo.svg";
 
 // Footer at the bottom of every page
