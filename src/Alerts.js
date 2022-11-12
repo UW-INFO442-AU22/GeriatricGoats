@@ -34,12 +34,36 @@ export function Alerts() {
 }
 
 
-// pop-up
+// pop-up with form
+// sends data to MakePost()
 function MakeForm() {
+  // these are things to deal with closing, showing the popup
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  // component for forms. stores input. 
+  const [titleValue, setTitleValue] = useState('')
+  const [incidentValue, setIncidentValue] = useState('')
+  const [locationValue, setLocationValue] = useState('')
+  // if there's a new input on a form,
+  // then set the accompaning useState with the inputted value 
+  const handleChange = (event) => {
+      // get form which was updated..
+      let newValue = event.target.value
+    if(event.target.id == 'titleInput'){
+      
+      setTitleValue(newValue);
+    }
+    else if(event.target.id == 'incidentInput'){
+
+      setIncidentValue(newValue);
+   }
+   else if(event.target.id == 'locationInput'){
+    setLocationValue(newValue);
+   }
+
+}
 
   return (
     <>
@@ -54,27 +78,31 @@ function MakeForm() {
         <Modal.Body>
 
           <Form>
-            <Form.Group className="mb-3" controlId="formInput">
+            <Form.Group className="mb-3" controlId="titleInput">
               <Form.Label>Title</Form.Label>
-              <Form.Control type="text" placeholder="Verbal altercation on the ave by Thai Tom " />
+              <Form.Control type="text" placeholder="Verbal altercation on the ave by Thai Tom" onChange={handleChange} value={titleValue}  />
               <Form.Text className="text-muted">
+                {titleValue}
                 Try and be as descriptive as you can!
               </Form.Text>
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formInput">
-              <Form.Label>Type of incident</Form.Label>
-              <Form.Select type="text" placeholder="Crime">
+
+            <Form.Group className="mb-3" controlId="incidentInput">
+              <Form.Label>Type of incident {incidentValue}</Form.Label>
+              <Form.Select type="text" placeholder="Crime" onChange={handleChange} value={incidentValue}>
                 <option>Crime</option>
                 <option>Heads up!</option>
                 <option>Beep boop</option>
               </Form.Select>
+            </Form.Group>
 
+            <Form.Group className="mb-3" controlId="locationInput">
+              <Form.Label>Location {locationValue}</Form.Label>
+              <Form.Control type="text" placeholder="University Way NE" onChange={handleChange} value={locationValue}  />
 
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formInput">
-              <Form.Label>Location</Form.Label>
-              <Form.Control type="text" placeholder="University Way NE" />
-            </Form.Group>
+
+
           </Form>
 
         </Modal.Body>
@@ -92,33 +120,6 @@ function MakeForm() {
 }
 
 
-
-// this will be the form that populates post data
-// need css on container for background
-function ExampleForm() {
-  return (
-    <Container >
-      <Form>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
-
-      </Form>
-    </Container>
-  )
-}
 
 // CardApp takes in both MakeCard and MakePost just so the data can be shared
 function CardApp() {
@@ -141,8 +142,8 @@ function CardApp() {
   );
 }
 
-// posts are attached here
-// parent component 
+// posts are attached here (basically just a dark container)
+// parent component to MakePost
 function MakeCard(props) {
   const posts = props.posts;
   // <Card.Header as="h5">Night Watch Forum</Card.Header>
@@ -157,8 +158,8 @@ function MakeCard(props) {
   );
 }
 
-// Make Post component
-// Child component
+// Post component
+// Child component to MakeCard
 function MakePost() {
   return (
     <div>
