@@ -16,6 +16,8 @@ export function Commute() {
           <img src={walkingIcon} alt="Walking figure icon" height="50em" weight="50em"></img>
           <h1>Commute</h1>
         </div>
+        <h2>Play It Safe</h2>
+
         <p>Write brief description about page content</p>
       </div>
       <div className="cards-container">

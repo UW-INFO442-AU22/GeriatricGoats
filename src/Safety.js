@@ -18,6 +18,7 @@ export function Safety() {
               <img src={shield} alt="Shield icon" height="50em" weight="50em"></img>
               <h1>Safety</h1>
             </div>
+            <h2>Play It Safe</h2>
             <p>Write brief description about page content</p>
           </Col>
           <Col>

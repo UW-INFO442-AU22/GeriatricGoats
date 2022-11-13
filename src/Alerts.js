@@ -21,6 +21,7 @@ export function Alerts() {
           <img src={loudSpeaker} alt="Loud speaker icon" height="50em" weight="50em"></img>
           <h1>Alerts</h1>
         </div>
+        <h2>Stay Informed</h2>
         <p>Write brief description about page content</p>
       </div>
       <MakeForm />
