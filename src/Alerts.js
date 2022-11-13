@@ -22,7 +22,7 @@ export function Alerts() {
           <h1>Alerts</h1>
         </div>
         <h2>Stay Informed</h2>
-        <p>Write brief description about page content</p>
+        <p>Report non-life threatening incidents occurring near and around campus after dark to keep other students informed.</p>
       </div>
       <MakeForm />
       <br/>

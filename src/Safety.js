@@ -19,7 +19,7 @@ export function Safety() {
               <h1>Safety</h1>
             </div>
             <h2>Play It Safe</h2>
-            <p>Write brief description about page content</p>
+            <p>Learn more about general safety and incident prevention tips.</p>
           </Col>
           <Col>
             <iframe

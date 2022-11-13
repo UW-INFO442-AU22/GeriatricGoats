@@ -18,7 +18,7 @@ export function Commute() {
         </div>
         <h2>Play It Safe</h2>
 
-        <p>Write brief description about page content</p>
+        <p>Learn more about alternatives to walking home alone after dark by using commuting resources covered by your U-Pass.</p>
       </div>
       <div className="cards-container">
         <Row xs={1} md={3} className="g-4">
