@@ -4,6 +4,7 @@ import ResourceCard from "./Card.js";
 import nightrideImg from "./img/nightride.jpg"
 import nightwalkImg from "./img/nightwalk.jpg"
 import walkingIcon from "./img/walking.png"
+import lightrailImg from "./img/lightrail.jpg"
 
 // Commuting resources page
 
@@ -30,25 +31,17 @@ export function Commute() {
           <Col>
             <ResourceCard
               imgLink={nightwalkImg}
-              imgAlt={"NightRide shuttle"}
+              imgAlt={"UW campus at night"}
               title="NightWalk"
               description="Uniformed security guards provide a walking escort to community members within the campus locations and the residential area north of 45th St., and to the UW Tower location. Guards can also assist building and office lockouts, as well as jump start dead car batteries."
               btnLink="../alerts" />
           </Col>
           <Col>
             <ResourceCard
-              imgLink={nightrideImg}
-              imgAlt={"Alt descr"}
-              title="Title"
-              description="Brief description"
-              btnLink="../alerts" />
-          </Col>
-          <Col>
-            <ResourceCard
-              imgLink={nightrideImg}
-              imgAlt={"Alt descr"}
-              title="Title"
-              description="Brief description"
+              imgLink={lightrailImg}
+              imgAlt={"Lightrail"}
+              title="Bus + Light Rail"
+              description="With over a dozen bus routes from campus and two light rail stations (U District Station west of campus and the University of Washington station located south of campus), students can leverage their U-Pass to commute at night time instead of walking home by themselves."
               btnLink="../alerts" />
           </Col>
         </Row>
