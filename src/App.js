@@ -8,6 +8,7 @@ import { Alerts } from "./Alerts";
 import { Commute } from "./Commute";
 import { Safety } from "./Safety";
 import { LogIn } from "./LogIn";
+//import firebase from "firebase/app";
 
 export function App() {
   return (
