@@ -1,0 +1,28 @@
+/* CSS used only for About Us page */
+.about-gradient-text {
+    background-image: linear-gradient(to right, #BCE8E1 35%, #F6FF81 70%);
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+.profile-row {
+    text-align: center;
+}
+
+.member-name {
+    color: white;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.member-role {
+    color: #F6FF81;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.student-profile {
+    color: #677189;
+    font-size: 12px;
+}

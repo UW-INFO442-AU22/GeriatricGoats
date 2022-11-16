@@ -20,8 +20,8 @@ function NavbarMenu() {
                   <Nav.Link href="alerts">Alerts</Nav.Link>
                   <Nav.Link href="commute">Commute</Nav.Link>
                   <Nav.Link href="safety">Safety</Nav.Link>
+                  <Nav.Link href="about">About Us</Nav.Link>
                   <Nav.Link href="log-in">Log In</Nav.Link>
-                  <SignInModal/>
                </Nav>
             </Navbar.Collapse>
          </Container>

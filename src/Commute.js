@@ -1,10 +1,11 @@
 import "./css/Commute.css";
 import { Col, Row } from "react-bootstrap";
 import ResourceCard from "./Card.js";
-import nightrideImg from "./img/nightride.jpg"
-import nightwalkImg from "./img/nightwalk.jpg"
-import walkingIcon from "./img/walking.png"
-import lightrailImg from "./img/lightrail.jpg"
+import buses from "./img/buses.png";
+import nightrideImg from "./img/nightride.jpg";
+import nightwalkImg from "./img/nightwalk.jpg";
+import walkingIcon from "./img/walking.png";
+import lightrailImg from "./img/lightrail.jpg";
 
 // Commuting resources page
 
@@ -16,11 +17,18 @@ export function Commute() {
           <img src={walkingIcon} alt="Walking figure icon" height="50em" weight="50em"></img>
           <h1>Commute</h1>
         </div>
-        <h2>Play It Safe</h2>
-
-        <p>Learn more about alternatives to walking home alone after dark by using commuting resources covered by your U-Pass.</p>
+        <Row xs={1} md={2} className="g-2">
+          <Col className="img-col">
+            <img className="buses-img" src={buses} alt="Metro buses on the road"></img>
+          </Col>
+          <Col>
+            <h2 className="commute-gradient-text">Play It Safe</h2>
+            <p>Campus is quite large—oftentimes it's too big for one person to walk alone at night. Learn more about alternatives to walking home by exploring commuting resources covered by your U-Pass.</p>
+          </Col>
+        </Row>
       </div>
       <div className="cards-container">
+      <h2 className="special-h2 commute-gradient-text">Explore Commuting Options</h2>
         <Row xs={1} md={3} className="g-4">
           <Col>
             <ResourceCard

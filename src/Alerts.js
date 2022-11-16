@@ -1,37 +1,53 @@
 import React, { useState } from 'react';
 import {
   Card,
+  Col,
   Row,
   Modal,
-  Container,
   Form,
   Button,
   Badge,
-  Stack
+  Stack,
 } from "react-bootstrap";
 import "./css/Alerts.css";
-import loudSpeaker from "./img/loud-speaker.png"
+import loudSpeaker from "./img/loud-speaker.png";
+import quadWalk from "./img/quad-walk.png"
 
 // Alerts() renders the entire forum page, it is being called in App.js
 export function Alerts() {
+
+  const [show, setShow] = useState(false); // included here to compile app
+  const handleShow = () => setShow(true); // included here to compile app
+
   return (
     <div>
       <div className="header-container">
-      <div className="page-header">
+        <div className="page-header">
           <img src={loudSpeaker} alt="Loud speaker icon" height="50em" weight="50em"></img>
           <h1>Alerts</h1>
         </div>
-        <h2>Stay Informed</h2>
-        <p>Report non-life threatening incidents occurring near and around campus after dark to keep other students informed.</p>
+        <Row xs={1} md={2} className="g-2">
+          <Col>
+            <h2 className="alerts-gradient-text">Stay Informed</h2>
+            <p className="page-description">Do you see suspicious activity or something unusual? Planning for your commute home? Help keep yourself and other students safe and in the loop by using the Alerts forum. Report or view any updates about non-life threatening incidents that occur on and around campus after dark.</p>
+            <Button variant="primary" className="btn btn-primary btn-lg outline" onClick={handleShow}>Create a new post ＋</Button>
+          </Col>
+          <Col>
+            <img className="quad-walk-img" src={quadWalk} alt="People walking across the Quad"></img>
+          </Col>
+        </Row>
+        <div className="page-content">
+          <h2 className="alerts-gradient-text">What's Happening Now</h2>
+          {/* Create post button here --> need to separate makeform components first */}
+          <MakeForm />
+        </div>
       </div>
-      <MakeForm />
-      <br/>
     </div>
   )
 }
 
 
-//MakeForm() creates the pop-up with the form, and it sends the data to MakePost() to populate the post information.
+// MakeForm() creates the pop-up with the form, and it sends the data to MakePost() to populate the post information.
 // It calls CardApp() which hosts the "Alert Hub", where posts are. It does this so it can send data.
 
 function MakeForm() {
@@ -48,97 +64,86 @@ function MakeForm() {
   // if there's a new input on a form,
   // then set the accompaning useState with the inputted value 
   const handleChange = (event) => {
-
-      let newValue = event.target.value
-      // get form which was updated..
-    if(event.target.id == 'titleInput'){
+    let newValue = event.target.value
+    // get form which was updated..
+    if (event.target.id == 'titleInput') {
       setTitleValue(newValue);
     }
-    else if(event.target.id == 'incidentInput'){
+    else if (event.target.id == 'incidentInput') {
 
       setIncidentValue(newValue);
-   }
-   else if(event.target.id == 'locationInput'){
-    setLocationValue(newValue);
-   }
+    }
+    else if (event.target.id == 'locationInput') {
+      setLocationValue(newValue);
+    }
+  }
 
-}
   // usestate that is an array and holds the posts
-    const [postList, setPostList] = useState([]);
+  const [postList, setPostList] = useState([]);
 
-      // event that happens when add post button is clicked
-      // sends form data to be MakePost 
-const clicked = event => {
-
+  // event that happens when add post button is clicked
+  // sends form data to be MakePost 
+  const clicked = (event) => {
     setPostList(postList.concat(
       <MakePost key={postList.length} title={titleValue} location={locationValue} incident={incidentValue} />));
-};
-        
-// returns title, MakeCard (parent component of posts, takes in postList), and button to make new post
-// also renders the Modal (popup with forum)
+  };
+
+  // returns title, MakeCard (parent component of posts, takes in postList), and button to make new post
+  // also renders the Modal (popup with forum)
   return (
-    <>
-    <Stack gap={2} className="col-md-10 mx-auto">
-    <h1 >Alert Hub</h1>
-      <Button variant="secondary" onClick={handleShow}>
-        Make a new post 
-      </Button>
-      <MakeCard posts={postList} />
-    </Stack>
+    <div>
+      <Stack gap={2} className="col-md-12 mx-auto">
+        <Button variant="secondary" onClick={handleShow}>
+          Create a new post
+        </Button>
+        <MakeCard posts={postList} />
+      </Stack>
 
-
-
-
-
-
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} size="md" aria-labelledby="contained-modal-title-vcenter" centered>
         <Modal.Header closeButton>
-          <Modal.Title>Create a new forum post</Modal.Title>
+          <Modal.Title>Create a new post</Modal.Title>
         </Modal.Header>
         <Modal.Body>
 
           <Form>
             <Form.Group className="mb-3" controlId="titleInput">
               <Form.Label>Title</Form.Label>
-              <Form.Control type="text" placeholder="Verbal altercation on the ave by Thai Tom" onChange={handleChange} value={titleValue}  />
+              <Form.Control type="text" placeholder="Verbal altercation on the ave by Thai Tom" onChange={handleChange} value={titleValue} />
               <Form.Text className="text-muted">
-                Try and be as descriptive as you can!
+                Try to be as descriptive as you can!
               </Form.Text>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="incidentInput">
               <Form.Label>Type of incident</Form.Label>
-              <Form.Select type="text" placeholder="Crime" onChange={handleChange} value={incidentValue}>
+              <Form.Select type="text" placeholder="Select one" onChange={handleChange} value={incidentValue}>
+                <option></option>
+                <option>Advisory</option>
                 <option>Crime</option>
-                <option>Heads up!</option>
-                <option>Beep boop</option>
+                <option>Other</option>
               </Form.Select>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="locationInput">
               <Form.Label>Location</Form.Label>
-              <Form.Control type="text" placeholder="University Way NE" onChange={handleChange} value={locationValue}  />
-
+              <Form.Control type="text" placeholder="University Way NE" onChange={handleChange} value={locationValue} />
             </Form.Group>
-
-
           </Form>
 
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
+          <Button className="cancel-btn" variant="outline-secondary" onClick={handleClose}>
+            Cancel
           </Button>
-        <Button variant="secondary" onClick={() => {
-          handleClose();
-          clicked();
-        }}>
-            Post
+          <Button className="submit-btn" variant="success" onClick={() => {
+            handleClose();
+            clicked();
+          }}>
+            Submit post
           </Button>
         </Modal.Footer>
       </Modal>
-    </>
-    
+    </div>
   );
 }
 
@@ -146,20 +151,17 @@ const clicked = event => {
 // posts are attached here (basically just a dark container)
 // parent component to MakePost
 function MakeCard(props) {
- 
+
   const posts = props.posts;
-  // <Card.Header as="h5">Night Watch Forum</Card.Header>
+
   return (
-    <Card bg="dark" style={{ width: '100%' }}>
+    <Card bg="transparent" style={{ width: '100%' }}>
       <Card.Body>
         <Stack gap={3} className="col-md-12 mx-auto">
-        {posts}
+          {posts}
         </Stack>
-
       </Card.Body>
     </Card>
-
-
   );
 }
 
@@ -171,36 +173,32 @@ function MakePost(props) {
   const location = props.location;
   const incident = props.incident;
 
-  console.log(title);
-
   return (
     <div>
-      <Card style={{ width: '100%' }}>
-        <Card.Header>Posted by u/user • 10 minutes ago</Card.Header>
+      <Card className="post-card" style={{ width: '100%' }}>
+        <Card.Header className="post-header">Posted by u/user • 10 minutes ago</Card.Header>
         <Card.Body>
           <Card.Text>
-            <Container>
-              <Row>
-                <h4>
-                  {title}
-                  <Badge bg="secondary">{incident}</Badge>
-                </h4>
-              </Row>
-              <Row>
-                <h5>
-                  {location}
-                </h5>
-              </Row>
-              <Row>
-                <h5>
-                  <Badge bg="secondary">upvote image</Badge>  7 upvotes
-                </h5>
-              </Row>
-            </Container>
+            <Row>
+              <span className="post-title">
+                {title}
+                <Badge className="post-tag" bg="info">{incident}</Badge>
+              </span>
+            </Row>
+            <Row>
+              <div className="post-location">
+                {location}
+              </div>
+            </Row>
+            <Row>
+              <span className="post-upvote">
+                <Button className="upvote-btn" variant="light" size="sm">Upvote</Button>
+                7 upvotes
+              </span>
+            </Row>
           </Card.Text>
         </Card.Body>
       </Card>
     </div>
   );
 }
-

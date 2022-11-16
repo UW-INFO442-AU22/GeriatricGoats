@@ -12,14 +12,14 @@ export function Safety() {
   return (
     <div>
       <div className="header-container">
+        <div className="page-header">
+          <img src={shield} alt="Shield icon" height="50em" weight="50em"></img>
+          <h1>Safety</h1>
+        </div>
         <Row xs={1} md={2} className="g-2">
           <Col>
-            <div className="page-header">
-              <img src={shield} alt="Shield icon" height="50em" weight="50em"></img>
-              <h1>Safety</h1>
-            </div>
-            <h2>Play It Safe</h2>
-            <p>Learn more about general safety and incident prevention tips.</p>
+            <h2 className="safety-gradient-text">Make Your Way Back Home</h2>
+            <p>Your safety and well-being are important. Make sure you are always protecting yourself by learning more about general safety tips and UW's additional incident prevention services.</p>
           </Col>
           <Col>
             <iframe
@@ -35,6 +35,7 @@ export function Safety() {
         </Row>
       </div>
       <div className="cards-container">
+        <h2 className="special-h2 commute-gradient-text">Explore Additional Resources</h2>
         <Row xs={1} md={3} className="g-4">
           <Col>
             <ResourceCard

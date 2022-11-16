@@ -10,13 +10,13 @@ h1 {
 }
 
 h2 {
-    color: #b175ff;
-    font-weight: 450;
+    font-weight: 600;
 }
 
 p {
     color: white;
     font-weight: 300;
+    line-height: 1.8em;
 }
 
 /* Cards */
