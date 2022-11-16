@@ -4,7 +4,6 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
 
 const provider = new GoogleAuthProvider();
-
 const auth = getAuth();
 signInWithPopup(auth, provider)
   .then((result) => {
@@ -24,11 +23,24 @@ signInWithPopup(auth, provider)
     const credential = GoogleAuthProvider.credentialFromError(error);
     // ...
   });
+  provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+  provider.setCustomParameters({
+   'login_hint': 'user@example.com'
+ });
+ 
 
 export function LogIn() {
    return (
       <div>
-         <h1>Log In page</h1>
+            <body>
+               <div class="main">
+                  <p class="sign" align="center">Sign in</p>
+                  <form class="form1"/>
+                     <input class="un " type="text" align="center" placeholder="Username"/>
+                     <input class="pass" type="password" align="center" placeholder="Password"/>
+                     <a class="submit" align="center">Sign in</a>
+               </div>
+            </body>
       </div>
    )
 }
