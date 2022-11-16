@@ -1,4 +1,4 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import "./css/NavbarMenu.css";
 import logo from "./img/logo.svg";
 import SignInModal from "./SignIn";
@@ -21,10 +21,14 @@ function NavbarMenu() {
                   <Nav.Link href="commute">Commute</Nav.Link>
                   <Nav.Link href="safety">Safety</Nav.Link>
                   <Nav.Link href="about">About Us</Nav.Link>
-                  <Nav.Link href="log-in">Log In</Nav.Link>
+                  {/*<Nav.Link href="log-in">Log In</Nav.Link> */}
+                  <Button variant="primary">
+                     Log In 
+                  </Button>
                </Nav>
             </Navbar.Collapse>
          </Container>
+         <SignInModal />
       </Navbar>
    );
 }
