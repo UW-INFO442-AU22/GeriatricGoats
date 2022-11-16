@@ -20,6 +20,7 @@ With the aim of increasing safety for UW students in the University District nei
 
 # Developer Information
 ## Built With
+- HTML & CSS
 - React JS
 - Bootstrap
 - Firebase
