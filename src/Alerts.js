@@ -12,6 +12,10 @@ import {
 import "./css/Alerts.css";
 import loudSpeaker from "./img/loud-speaker.png";
 import quadWalk from "./img/quad-walk.png"
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import "firebase/compat/database";
+import "firebase/compat/storage";
 
 // Alerts() renders the entire forum page, it is being called in App.js
 export function Alerts() {
@@ -81,10 +85,23 @@ function MakeForm() {
   // usestate that is an array and holds the posts
   const [postList, setPostList] = useState([]);
 
+ //const postsRef = firebase.database().ref('posts')
+ // postsRef.push(newPostObj)
+  // postsRef.set(post)
+
   // event that happens when add post button is clicked
   // sends form data to be MakePost 
   const clicked = (event) => {
+    // once clicked, send data to firebase
+    const newPostObj = { title:titleValue,
+      incident:incidentValue,
+      location:locationValue
+    } 
+    const postRef = firebase.database().ref('post')
+    postRef.push(newPostObj)
+
     setPostList(postList.concat(
+
       <MakePost key={postList.length} title={titleValue} location={locationValue} incident={incidentValue} />));
   };
 
