@@ -30,15 +30,15 @@ export function Alerts() {
           <Col>
             <h2 className="alerts-gradient-text">Stay Informed</h2>
             <p className="page-description">Do you see suspicious activity or something unusual? Planning for your commute home? Help keep yourself and other students safe and in the loop by using the Alerts forum. Report or view any updates about non-life threatening incidents that occur on and around campus after dark.</p>
-            <Button variant="primary" className="btn btn-primary btn-lg outline" onClick={handleShow}>Create a new post ＋</Button>
           </Col>
           <Col>
             <img className="quad-walk-img" src={quadWalk} alt="People walking across the Quad"></img>
           </Col>
         </Row>
+        
+      {/* margins need to be reduced perhaps */}
         <div className="page-content">
-          <h2 className="alerts-gradient-text">What's Happening Now</h2>
-          {/* Create post button here --> need to separate makeform components first */}
+
           <MakeForm />
         </div>
       </div>
@@ -91,11 +91,11 @@ function MakeForm() {
   // returns title, MakeCard (parent component of posts, takes in postList), and button to make new post
   // also renders the Modal (popup with forum)
   return (
-    <div>
+    <div >
+            <Button variant="primary" className="btn btn-primary btn-lg outline" onClick={handleShow}>Create a new post ＋</Button>
+            <h2 className="alerts-gradient-text">What's Happening Now</h2>
+
       <Stack gap={2} className="col-md-12 mx-auto">
-        <Button variant="secondary" onClick={handleShow}>
-          Create a new post
-        </Button>
         <MakeCard posts={postList} />
       </Stack>
 

@@ -1,0 +1,85 @@
+/* CSS used only for Alerts page */
+.alerts-gradient-text {
+    background-image: linear-gradient(to right, #BCE8E1 15%, #F6FF81 50%);
+    background-clip: text;
+    color: transparent;
+}
+
+.quad-walk-img {
+    height: auto;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.page-content {
+ /*     margin: 50px 0; */ 
+}
+
+.btn {
+    margin: 35px 0 50px 0;
+    border-radius: 50px;
+}
+
+.btn-primary.outline {
+    border: 2px solid #F6FF81;
+    color: #F6FF81;
+    background-color: transparent;
+}
+
+.btn-primary.outline:hover {
+    color: #161B21;
+    background-color: #F6FF81;
+}
+
+.cancel-btn {
+    margin: 10px 0 10px 10px;
+}
+
+.submit-btn {
+    margin: 10px;
+}
+
+.post-card {
+    margin: 8px 0;
+    border-width: 4px;
+    border-radius: 10px;
+}
+
+.post-header {
+    color: #677189;
+    font-weight: 300;
+}
+
+.post-title {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.post-tag {
+    font-size: medium;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.post-location {
+    color: #677189;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+.post-upvote {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.upvote-btn {
+    margin-right: 10px;
+}
+
+/* Responsive styling */
+@media screen and (min-width: 820px) {
+    .quad-walk-img {
+        padding-left: 20px;
+    }
+}
