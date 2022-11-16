@@ -1,97 +1,29 @@
-/* CSS used only for Log In page */
-
-body {
-    background-color: 1 #161B21;
-    font-family: 'Lexend', sans-serif;
-}
-
-.main {
-    background-color:#677189;
-    width: 400px;
-    height: 400px;
-    margin: 7em auto;
-    border-radius: 1.5em;
-}
-
-.sign {
-    padding-top: 40px;
-    color: black;
-    font-family: 'Lexend', sans-serif;
-    font-size: 26px;
-}
-
-.un {
-width: 76%;
-color: black;
-font-size: 14px;
-letter-spacing: 1px;
-background: black;
-padding: 10px 20px;
-border: none;
-border-radius: 20px;
-outline: none;
-box-sizing: border-box;
-border: 2px solid black;
-margin-bottom: 50px;
-margin-left: 46px;
-text-align: center;
-margin-bottom: 27px;
-font-family: 'Lexend', sans-serif;
-}
-
-form.form1 {
-    padding-top: 40px;
-}
-
-.pass {
-        width: 76%;
-color: rgb(38, 50, 56);
-font-size: 14px;
-letter-spacing: 1px;
-background: black;
-padding: 10px 20px;
-border: none;
-border-radius: 20px;
-outline: none;
-box-sizing: border-box;
-border: 2px solid black;
-margin-bottom: 50px;
-margin-left: 46px;
-text-align: center;
-margin-bottom: 27px;
-font-family: 'Lexend', sans-serif;
-}
-
-
-.un:focus, .pass:focus {
-    border: 2px solid black !important;
-    
-}
-
-.submit {
-  cursor: pointer;
-    border-radius: 5em;
-    color: black;
-    background: linear-gradient(to right, #F6FF81, #F6FF81);
-    border: 0;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    font-family: 'Lexend', sans-serif;
-    margin-left: 35%;
-    font-size: 13px;
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-}
-
-a {
-    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-    color: rgb(204, 204, 204);
-    text-decoration: none
-}
-
-@media (max-width: 600px) {
-    .main {
-        border-radius: 0px;
-    }
-}
+.margin-0 {
+    margin: 0 !important;
+  }
+  .padding-0 {
+    padding: 0 !important;
+  }
+  .center-block {
+    width: 100% ;
+  }
+  
+  #authCard .card .card-content {
+    overflow: hidden;
+  }
+  #authCard .tabs .tab a {
+    color: #eee;
+  }
+  #authCard .tabs .tab a.active {
+    color: #00c853;
+  }
+  #authCard .tabs .indicator {
+    background-color: #00c853;
+    background: none;
+  }
+  #registerSection, #loginSection {
+    overflow: hidden;
+  }
+  button[type="submit"].btn-large.green.accent-4 {
+    margin-top: 30px;
+  }

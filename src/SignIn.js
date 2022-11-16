@@ -1,41 +1,46 @@
-import React from "react";
-import { fireauth, firebaseSetup } from "./firebase";
+import "./css/LogIn.css";
+import { initializeApp } from 'firebase/app';
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
-const SignInModal = () => {
-    const signIn = provider => {
-        switch (provider) {
-            case "google":
-                provider = new firebaseSetup.auth.GoogleAuthProvider();
-                break;
-            default:
-                // Default to Google
-                provider = new firebaseSetup.auth.GoogleAuthProvider();
-        }
-        fireauth.signInWithPopup(provider);
-    };
 
-    return (
-        <section className="modal fade" id="signInModal">
-            <div className="modal-dialog modal-dialog-centered">
-                <div className="modal-content">
-                    <div className="modal-header">
-                        <h1 className="modal-title mx-auto">Sign In</h1>
-                    </div>
-                    <div className="modal-body">
-                        <br/>
-                        <button
-                            className="btn btn-success mb-2"
-                            onClick={() => signIn("google")}
-                            data-toggle="modal" data-target="#signInModal"
-                        >
-                            With Google
-                        </button>
-                        <br/>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-};
+const provider = new GoogleAuthProvider();
+const auth = getAuth();
+signInWithPopup(auth, provider)
+  .then((result) => {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+    // The signed-in user info.
+    const user = result.user;
+    // ...
+  }).catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // The email of the user's account used.
+    const email = error.customData.email;
+    // The AuthCredential type that was used.
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    // ...
+  });
+  provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+  provider.setCustomParameters({
+   'login_hint': 'user@example.com'
+ });
+ 
 
-export default SignInModal;
+export function LogIn() {
+   return (
+      <div>
+            <body>
+               <div class="main">
+                  <p class="sign" align="center">Sign in</p>
+                  <form class="form1"/>
+                     <input class="un " type="text" align="center" placeholder="Username"/>
+                     <input class="pass" type="password" align="center" placeholder="Password"/>
+                     <a class="submit" align="center">Sign in</a>
+               </div>
+            </body>
+      </div>
+   )
+}
