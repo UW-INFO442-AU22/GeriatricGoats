@@ -9,8 +9,6 @@ import { Commute } from "./Commute";
 import { Safety } from "./Safety";
 import { AboutUs } from "./About";
 import { LogIn } from "./LogIn";
-import { initializeApp } from 'firebase/app';
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
 export function App() {
   return (
