@@ -1,6 +1,6 @@
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
-import LogIn from "./LogIn.js";
 import "./css/NavbarMenu.css";
+import { LogIn } from './LogIn' 
 import logo from "./img/logo.svg";
 
 // Navigation menu at the top of every page
@@ -22,9 +22,11 @@ function NavbarMenu() {
                   <Nav.Link href="safety">Safety</Nav.Link>
                   <Nav.Link href="about">About Us</Nav.Link>
                   {/*<Nav.Link href="log-in">Log In</Nav.Link> */}
-                  <Button type= "submit" onclick="LogIn()">
-                     Log In 
+
+                  <Button onclick="SignInModal()">
+                     <a href="#" class="button" onClick={LogIn} >Login</a>
                   </Button>
+
                </Nav>
             </Navbar.Collapse>
          </Container>
