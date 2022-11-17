@@ -2,6 +2,7 @@ import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import "./css/NavbarMenu.css";
 import logo from "./img/logo.svg";
 import { googleSignIn } from "./LogIn";
+import { signMeOut } from "./SignOut";
 
 // Navigation menu at the top of every page
 
@@ -25,6 +26,10 @@ function NavbarMenu() {
 
                   <Button variant="primary" onClick={googleSignIn}> 
                      Sign In with Google
+                  </Button>
+
+                  <Button variant="primary" onClick={signMeOut}> 
+                     Sign Out
                   </Button>
 
                </Nav>
