@@ -24,12 +24,12 @@ function NavbarMenu() {
                   <Nav.Link href="about">About Us</Nav.Link>
                   {/*<Nav.Link href="log-in">Log In</Nav.Link> */}
 
-                  <Button variant="primary" onClick={googleSignIn}> 
-                     Sign In with Google
+                  <Button class="signIn" variant="primary" onClick={googleSignIn}> 
+                     Log In
                   </Button>
 
-                  <Button variant="primary" onClick={signMeOut}> 
-                     Sign Out
+                  <Button class="signOut" variant="primary" onClick={signMeOut}> 
+                     Log Out
                   </Button>
 
                </Nav>
