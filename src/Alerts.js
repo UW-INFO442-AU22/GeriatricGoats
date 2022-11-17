@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Card,
   Col,
@@ -82,15 +82,9 @@ function MakeForm() {
     }
   }
 
-  // usestate that is an array and holds the posts
-  const [postList, setPostList] = useState([]);
-
- //const postsRef = firebase.database().ref('posts')
- // postsRef.push(newPostObj)
-  // postsRef.set(post)
 
   // event that happens when add post button is clicked
-  // sends form data to be MakePost 
+  // sends filled in form data to firebase
   const clicked = (event) => {
     // once clicked, send data to firebase
     const newPostObj = { title:titleValue,
@@ -98,12 +92,41 @@ function MakeForm() {
       location:locationValue
     } 
     const postRef = firebase.database().ref('post')
-    postRef.push(newPostObj)
+    postRef.push(newPostObj) // push to firebase database
+  }
 
+// trying to wrangle the firebase data to make it useable
+  // usestate that is an array and holds the posts
+  const [postList, setPostList] = useState([]);
+
+  useEffect(() => {  
+  const postRef = firebase.database().ref('post')
+   postRef.on('value', (snapshot) => {
+  
+    const thePosts = snapshot.val() // convert to js value
+    let objectKeyArray = Object.keys(thePosts)
+    let postsArray = objectKeyArray.map((key) =>{
+      let singlePost = thePosts[key]
+      singlePost.key = key
+      return(singlePost);
+    })
+    setPostList(postsArray)
+  })
+}, [])
+
+console.log(postList);
+
+let singlePosts = []
+singlePosts = postList.map((postItem) => {
+  console.log(postItem);
+    return <MakePost key ={postItem.key} title={postItem.title} location={postItem.location} incident={postItem.incident}/>
+
+  })
+  /*
     setPostList(postList.concat(
-
       <MakePost key={postList.length} title={titleValue} location={locationValue} incident={incidentValue} />));
   };
+  */ 
 
   // returns title, MakeCard (parent component of posts, takes in postList), and button to make new post
   // also renders the Modal (popup with forum)
@@ -113,7 +136,7 @@ function MakeForm() {
             <h2 className="alerts-gradient-text">What's Happening Now</h2>
 
       <Stack gap={2} className="col-md-12 mx-auto">
-        <MakeCard posts={postList} />
+        <MakeCard posts={singlePosts} />
       </Stack>
 
       <Modal show={show} onHide={handleClose} size="md" aria-labelledby="contained-modal-title-vcenter" centered>
