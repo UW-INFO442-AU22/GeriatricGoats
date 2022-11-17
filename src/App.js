@@ -8,7 +8,7 @@ import { Alerts } from "./Alerts";
 import { Commute } from "./Commute";
 import { Safety } from "./Safety";
 import { AboutUs } from "./About";
-import { LogIn } from "./LogIn";
+import { TextContent } from "./LogInPage";
 
 export function App() {
   return (
@@ -20,7 +20,7 @@ export function App() {
         <Route path="commute" element={<Commute />} />
         <Route path="safety" element={<Safety />} />
         <Route path="about" element={<AboutUs />} />
-        <Route path="log-in" element={<LogIn />} />
+        <Route path="log-in" element={<TextContent />} />
       </Routes>
       <Footer />
     </div>
