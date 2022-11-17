@@ -2,8 +2,6 @@ import "./css/LogIn.css";
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
-
-
 /*const provider = new GoogleAuthProvider();
 const auth = getAuth();
 signInWithPopup(auth, provider)
@@ -28,7 +26,7 @@ signInWithPopup(auth, provider)
   provider.setCustomParameters({
    'login_hint': 'user@example.com'
  });*/
- 
+
 
 export function LogIn() {
    const provider = new GoogleAuthProvider();
@@ -51,23 +49,8 @@ export function LogIn() {
          // The AuthCredential type that was used.
          const credential = GoogleAuthProvider.credentialFromError(error);
          // ...
-      }),;
-      provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
-      provider.setCustomParameters({
-         'login_hint': 'user@example.com'
-      });
- 
-      <div>
-            <body>
-               <div class="main">
-                  <p class="sign" align="center">Sign in</p>
-                  <form class="form1"/>
-                     <input class="un " type="text" align="center" placeholder="Username"/>
-                     <input class="pass" type="password" align="center" placeholder="Password"/>
-                     <a class="submit" align="center">Sign in</a>
-               </div>
-            </body>
-
-      </div>
+      })
    )
 }
+
+export default LogIn;

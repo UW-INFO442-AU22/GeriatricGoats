@@ -1,7 +1,7 @@
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
+import LogIn from "./LogIn.js";
 import "./css/NavbarMenu.css";
 import logo from "./img/logo.svg";
-import SignInModal from "./SignIn";
 
 // Navigation menu at the top of every page
 
@@ -22,13 +22,12 @@ function NavbarMenu() {
                   <Nav.Link href="safety">Safety</Nav.Link>
                   <Nav.Link href="about">About Us</Nav.Link>
                   {/*<Nav.Link href="log-in">Log In</Nav.Link> */}
-                  <Button variant="primary">
+                  <Button type= "submit" onclick="LogIn()">
                      Log In 
                   </Button>
                </Nav>
             </Navbar.Collapse>
          </Container>
-         <SignInModal />
       </Navbar>
    );
 }
