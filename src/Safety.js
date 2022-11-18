@@ -43,7 +43,7 @@ export function Safety() {
               imgAlt={"Drumheller Fountain"}
               title="SafeCampus"
               description="UW’s violence-prevention and response program which can help you navigate many situations, whether they impact you or someone you know — including threats, stalking, sexual assault, relationship violence, harassment, suicide concerns, workplace violence and more."
-              btnLink="../alerts" />
+              btnLink="https://www.washington.edu/safecampus/" />
           </Col>
           <Col>
             <ResourceCard
@@ -51,7 +51,7 @@ export function Safety() {
               imgAlt={"UW Alert logo"}
               title="UW Alert"
               description="A tool that disseminates alert notices to UW students, faculty and staff if there are ever emergencies or activities that may disrupt normal campus operations."
-              btnLink="../alerts" />
+              btnLink="https://www.washington.edu/safety/alert/" />
           </Col>
           <Col>
             <ResourceCard
@@ -59,7 +59,7 @@ export function Safety() {
               imgAlt={"UW SafeZone App"}
               title="UW SafeZone"
               description="The SafeZone mobile app allows UW students to have immediate access to UW police and local emergency services anyhere in the U District. Call for medical assistance, emergencies, and share your location with police officers."
-              btnLink="../alerts" />
+              btnLink="https://police.uw.edu/services/safe-zone-app/" />
           </Col>
         </Row>
       </div>

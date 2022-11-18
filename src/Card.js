@@ -1,5 +1,4 @@
-import { Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Card, Button } from "react-bootstrap";
 import "./css/Card.css"
 
 // Basic card layout for resource pages
@@ -11,7 +10,7 @@ function ResourceCard(props) {
             <Card.ImgOverlay className="card-overlay">
                     <Card.Title className="card-title">{props.title}</Card.Title>
                     <Card.Text className="card-text">{props.description}</Card.Text>
-                    <Link className="btn btn-primary btn-md" to={props.btnLink} role="button">Learn More</Link>
+                    <Button className="btn btn-primary btn-md" href={props.btnLink} role="button" target="_blank">Learn More</Button>
             </Card.ImgOverlay>
         </Card>
     );

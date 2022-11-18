@@ -36,7 +36,7 @@ export function Commute() {
               imgAlt={"NightRide shuttle"}
               title="NightRide"
               description="A fare-free, safe and easy way for Husky Card holders to get home at night. NightRide shuttles pick up passengers at eight campus locations and drop off passengers anywhere within one of two zones after the campus location stops."
-              btnLink="../alerts" />
+              btnLink="https://transportation.uw.edu/getting-around/shuttles/nightride" />
           </Col>
           <Col>
             <ResourceCard
@@ -44,7 +44,7 @@ export function Commute() {
               imgAlt={"UW campus at night"}
               title="NightWalk"
               description="Uniformed security guards provide a walking escort to community members within the campus locations and the residential area north of 45th St., and to the UW Tower location. Guards can also assist building and office lockouts, as well as jump start dead car batteries."
-              btnLink="../alerts" />
+              btnLink="https://www.google.com/maps/d/viewer?mid=1AvFh3QRT8B2ygMYX6FbAuVh3xCE&ll=47.659230905970134%2C-122.30881695&z=15" />
           </Col>
           <Col>
             <ResourceCard
@@ -52,7 +52,7 @@ export function Commute() {
               imgAlt={"Lightrail"}
               title="Bus + Light Rail"
               description="With over a dozen bus routes from campus and two light rail stations (U District Station west of campus and the University of Washington station located south of campus), students can leverage their U-Pass to commute at night time instead of walking home by themselves."
-              btnLink="../alerts" />
+              btnLink="https://pugetsound.onebusaway.org/#75402" />
           </Col>
         </Row>
       </div>
