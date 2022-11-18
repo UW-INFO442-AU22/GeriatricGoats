@@ -3,6 +3,22 @@ import "./css/NavbarMenu.css";
 import logo from "./img/logo.svg";
 import { googleSignIn } from "./LogIn";
 import { signMeOut } from "./SignOut";
+import { initializeApp } from 'firebase/app';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import "firebase/compat/database";
+import "firebase/compat/storage";
+// Initializing FB app:
+const firebaseConfig = {
+   apiKey: "AIzaSyC3_6IAbYBbJiGzXGK8WVOXIkxAmtUoY0w",
+   authDomain: "make-it-home-app.firebaseapp.com",
+   projectId: "make-it-home-app",
+   storageBucket: "make-it-home-app.appspot.com",
+   messagingSenderId: "1003220503069",
+   appId: "1:1003220503069:web:2e51d240ecd85cbf6754f4"
+};
+const app = initializeApp(firebaseConfig);
+
 
 // Navigation menu at the top of every page
 
@@ -24,7 +40,17 @@ function NavbarMenu() {
                   <Nav.Link href="about">About Us</Nav.Link>
                   {/*<Nav.Link href="log-in">Log In</Nav.Link> */}
 
-                  <Button class="signIn" variant="primary" onClick={googleSignIn}> 
+                  <Button class="signIn" variant="primary" onClick={() => {
+                     var user = firebase.auth().currentUser;
+                     if (user) {
+                     // User is signed in.
+                     //<span style="color: red;" id="span-to-change-color">I am red(Click Me)</span>
+                     } else {
+                     // No user is signed in.
+                     //<span style="color: red;" id="span-to-change-color">not logged in</span>
+                     googleSignIn();
+                     }
+                  }}>
                      Log In
                   </Button>
 

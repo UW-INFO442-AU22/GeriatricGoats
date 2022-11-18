@@ -187,9 +187,17 @@ singlePosts = postList.map((postItem) => {
             Cancel
           </Button>
           <Button className="submit-btn" variant="success" onClick={() => {
-            handleClose();
-            clicked();
-            googleSignIn();
+            //handleClose();
+            //clicked();
+            var user = firebase.auth().currentUser;
+            if (user) {
+              // User is signed in.
+              handleClose();
+              clicked();
+            } else {
+              // No user is signed in.
+              googleSignIn();
+            }
           }}>
             Submit post
           </Button>
