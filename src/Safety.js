@@ -3,7 +3,7 @@ import { Col, Row } from "react-bootstrap";
 import ResourceCard from "./Card.js";
 import safecampusImg from "./img/safecampus.jpg";
 import uwalertImg from "./img/uwalert.png"
-import uwPDImg from "./img/uwpd.jpeg";
+import safezoneImg from "./img/safezone.png";
 import shield from "./img/shield.png";
 
 // Other general safety resources page
@@ -55,10 +55,10 @@ export function Safety() {
           </Col>
           <Col>
             <ResourceCard
-              imgLink={uwPDImg}
-              imgAlt={"UW Police logo"}
-              title="UW Police"
-              description="To report non-emergencies, contact: 206.685.UWPD (8973). To report anonymous tips, contact: 206.685.TIPS (8477)."
+              imgLink={safezoneImg}
+              imgAlt={"UW SafeZone App"}
+              title="UW SafeZone"
+              description="The SafeZone mobile app allows UW students to have immediate access to UW police and local emergency services anyhere in the U District. Call for medical assistance, emergencies, and share your location with police officers."
               btnLink="../alerts" />
           </Col>
         </Row>
