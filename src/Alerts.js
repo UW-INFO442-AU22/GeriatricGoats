@@ -75,6 +75,7 @@ function MakeForm() {
   const [titleValue, setTitleValue] = useState('')
   const [incidentValue, setIncidentValue] = useState('')
   const [locationValue, setLocationValue] = useState('')
+  const [timeValue, setTimeValue] = useState('')
 
   // if there's a new input on a form,
   // then set the accompaning useState with the inputted value 
@@ -91,6 +92,9 @@ function MakeForm() {
     else if (event.target.id == 'locationInput') {
       setLocationValue(newValue);
     }
+    else if (event.target.id == 'timeInput') {
+      setTimeValue(newValue);
+    }
   }
 
 
@@ -100,7 +104,8 @@ function MakeForm() {
     // once clicked, send data to firebase
     const newPostObj = { title:titleValue,
       incident:incidentValue,
-      location:locationValue
+      location:locationValue,
+      time: timeValue
     } 
     const postRef = firebase.database().ref('post')
     postRef.push(newPostObj) // push to firebase database
@@ -130,7 +135,7 @@ console.log(postList);
 let singlePosts = []
 singlePosts = postList.map((postItem) => {
   console.log(postItem);
-    return <MakePost key ={postItem.key} title={postItem.title} location={postItem.location} incident={postItem.incident}/>
+    return <MakePost key ={postItem.key} title={postItem.title} location={postItem.location} incident={postItem.incident} time={postItem.time}/>
 
   })
   /*
@@ -179,6 +184,11 @@ singlePosts = postList.map((postItem) => {
               <Form.Label>Location</Form.Label>
               <Form.Control type="text" placeholder="University Way NE" onChange={handleChange} value={locationValue} />
             </Form.Group>
+
+            <Form.Group className="mb-3" controlId="timeInput">
+              <Form.Label>Current Time</Form.Label>
+              <Form.Control type="text" placeholder="6:30 PM" onChange={handleChange} value={timeValue} />
+            </Form.Group>
           </Form>
 
         </Modal.Body>
@@ -224,11 +234,12 @@ function MakePost(props) {
   const title = props.title;
   const location = props.location;
   const incident = props.incident;
+  const time = props.time;
 
   return (
     <div>
       <Card className="post-card" style={{ width: '100%' }}>
-        <Card.Header className="post-header">Posted by u/user • 10 minutes ago</Card.Header>
+        <Card.Header className="post-header">Posted by u/anonHusky • {time}</Card.Header>
         <Card.Body>
           <Card.Text>
             <Row>
