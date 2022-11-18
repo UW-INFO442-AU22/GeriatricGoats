@@ -31,8 +31,8 @@ firebase.initializeApp(firebaseConfig);
 // Alerts() renders the entire forum page, it is being called in App.js
 export function Alerts() {
 
-  const [show, setShow] = useState(false); // included here to compile app
-  const handleShow = () => setShow(true); // included here to compile app
+  // update - this was causing compiler error: const [show, setShow] = useState(false); // included here to compile app
+ // update - this was causing compiler error: const handleShow = () => setShow(true); // included here to compile app 
 
   return (
     <div>
@@ -82,17 +82,17 @@ function MakeForm() {
   const handleChange = (event) => {
     let newValue = event.target.value
     // get form which was updated..
-    if (event.target.id == 'titleInput') {
+    if (event.target.id === 'titleInput') {
       setTitleValue(newValue);
     }
-    else if (event.target.id == 'incidentInput') {
+    else if (event.target.id === 'incidentInput') {
 
       setIncidentValue(newValue);
     }
-    else if (event.target.id == 'locationInput') {
+    else if (event.target.id === 'locationInput') {
       setLocationValue(newValue);
     }
-    else if (event.target.id == 'timeInput') {
+    else if (event.target.id === 'timeInput') {
       setTimeValue(newValue);
     }
   }
@@ -211,6 +211,7 @@ singlePosts = postList.map((postItem) => {
           }}>
             Submit post
           </Button>
+          
         </Modal.Footer>
       </Modal>
     </div>
@@ -260,12 +261,6 @@ function MakePost(props) {
               <div className="post-location">
                 {location}
               </div>
-            </Row>
-            <Row>
-              <span className="post-upvote">
-                <Button className="upvote-btn" variant="light" size="sm">Upvote</Button>
-                7 upvotes
-              </span>
             </Row>
           </Card.Text>
         </Card.Body>
