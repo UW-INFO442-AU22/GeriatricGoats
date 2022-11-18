@@ -8,6 +8,7 @@ import { Alerts } from "./Alerts";
 import { Commute } from "./Commute";
 import { Safety } from "./Safety";
 import { AboutUs } from "./About";
+import { ByeBye } from "./Bye";
 
 export function App() {
   return (
@@ -19,6 +20,7 @@ export function App() {
         <Route path="commute" element={<Commute />} />
         <Route path="safety" element={<Safety />} />
         <Route path="about" element={<AboutUs />} />
+        <Route path="bye" element={<ByeBye />} />
       </Routes>
       <Footer />
     </div>

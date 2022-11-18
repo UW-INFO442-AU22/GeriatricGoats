@@ -16,6 +16,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import "firebase/compat/database";
 import "firebase/compat/storage";
+import { googleSignIn } from "./LogIn";
 // Initializing FB app:
 const firebaseConfig = {
   apiKey: "AIzaSyC3_6IAbYBbJiGzXGK8WVOXIkxAmtUoY0w",
@@ -188,6 +189,7 @@ singlePosts = postList.map((postItem) => {
           <Button className="submit-btn" variant="success" onClick={() => {
             handleClose();
             clicked();
+            googleSignIn();
           }}>
             Submit post
           </Button>
