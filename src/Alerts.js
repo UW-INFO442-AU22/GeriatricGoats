@@ -206,6 +206,7 @@ singlePosts = postList.map((postItem) => {
               clicked();
             } else {
               // No user is signed in.
+              window.alert("Error! Must be signed in to use all features.");
               googleSignIn();
             }
           }}>
