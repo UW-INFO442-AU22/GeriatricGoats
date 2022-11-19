@@ -17,7 +17,8 @@ import 'firebase/compat/auth';
 import "firebase/compat/database";
 import "firebase/compat/storage";
 import { googleSignIn } from "./LogIn";
-// Initializing FB app:
+
+// Initializes firebase app
 const firebaseConfig = {
   apiKey: "AIzaSyC3_6IAbYBbJiGzXGK8WVOXIkxAmtUoY0w",
   authDomain: "make-it-home-app.firebaseapp.com",
@@ -32,7 +33,7 @@ firebase.initializeApp(firebaseConfig);
 export function Alerts() {
 
   // update - this was causing compiler error: const [show, setShow] = useState(false); // included here to compile app
- // update - this was causing compiler error: const handleShow = () => setShow(true); // included here to compile app 
+  // update - this was causing compiler error: const handleShow = () => setShow(true); // included here to compile app 
 
   return (
     <div>
@@ -41,19 +42,7 @@ export function Alerts() {
           <img src={loudSpeaker} alt="Loud speaker icon" height="50em" weight="50em"></img>
           <h1>Alerts</h1>
         </div>
-        <Row xs={1} md={2} className="g-2">
-          <Col>
-            <h2 className="alerts-gradient-text">Stay Informed</h2>
-            <p className="page-description">Do you see suspicious activity or something unusual? Planning for your commute home? Help keep yourself and other students safe and in the loop by using the Alerts forum. Report or view any updates about non-life threatening incidents that occur on and around campus after dark.</p>
-          </Col>
-          <Col>
-            <img className="quad-walk-img" src={quadWalk} alt="People walking across the Quad"></img>
-          </Col>
-        </Row>
-        
-      {/* margins need to be reduced perhaps */}
         <div className="page-content">
-
           <MakeForm />
         </div>
       </div>
@@ -102,65 +91,69 @@ function MakeForm() {
   // sends filled in form data to firebase
   const clicked = (event) => {
     // once clicked, send data to firebase
-    const newPostObj = { title:titleValue,
-      incident:incidentValue,
-      location:locationValue,
+    const newPostObj = {
+      title: titleValue,
+      incident: incidentValue,
+      location: locationValue,
       time: timeValue
-    } 
-    const postRef = firebase.database().ref('post')
-    postRef.push(newPostObj) // push to firebase database
+    }
+    const postRef = firebase.database().ref('post');
+    postRef.push(newPostObj); // push to firebase database
   }
 
-// trying to wrangle the firebase data to make it useable
-  // usestate that is an array and holds the posts
+  // trying to wrangle the firebase data to make it usable
+  // useState that is an array and holds the posts
   const [postList, setPostList] = useState([]);
 
-  useEffect(() => {  
-  const postRef = firebase.database().ref('post')
-   postRef.on('value', (snapshot) => {
-  
-    const thePosts = snapshot.val() // convert to js value
-    let objectKeyArray = Object.keys(thePosts)
-    let postsArray = objectKeyArray.map((key) =>{
-      let singlePost = thePosts[key]
-      singlePost.key = key
-      return(singlePost);
-    })
-    setPostList(postsArray)
-  })
-}, [])
+  useEffect(() => {
+    const postRef = firebase.database().ref('post')
+    postRef.on('value', (snapshot) => {
 
-console.log(postList);
+      const thePosts = snapshot.val() // convert to js value
+      let objectKeyArray = Object.keys(thePosts)
+      let postsArray = objectKeyArray.map((key) => {
+        let singlePost = thePosts[key]
+        singlePost.key = key
+        return (singlePost);
+      })
+      setPostList(postsArray);
+    });
+  }, []);
 
-let singlePosts = []
-singlePosts = postList.map((postItem) => {
-  console.log(postItem);
-    return <MakePost key ={postItem.key} title={postItem.title} location={postItem.location} incident={postItem.incident} time={postItem.time}/>
+  console.log(postList);
 
-  })
-  /*
-    setPostList(postList.concat(
-      <MakePost key={postList.length} title={titleValue} location={locationValue} incident={incidentValue} />));
-  };
-  */ 
+  let singlePosts = []
+  singlePosts = postList.map((postItem) => {
+    console.log(postItem);
+    return <MakePost key={postItem.key} title={postItem.title} location={postItem.location} incident={postItem.incident} time={postItem.time} />
+  });
 
   // returns title, MakeCard (parent component of posts, takes in postList), and button to make new post
   // also renders the Modal (popup with forum)
   return (
-    <div >
-            <Button variant="primary" className="btn btn-primary btn-lg outline" onClick={handleShow}>Create a new post ＋</Button>
-            <h2 className="alerts-gradient-text">What's Happening Now</h2>
-
-      <Stack gap={2} className="col-md-12 mx-auto">
-        <MakeCard posts={singlePosts} />
-      </Stack>
-
+    <div>
+      <Row xs={1} md={2} className="g-2">
+        <Col>
+          <h2 className="h2-header alerts-gradient-text">Stay Informed</h2>
+          <p className="page-description">Do you see suspicious activity or something unusual? Planning for your commute home? Help keep yourself and other students safe and in the loop by using the Alerts forum. Report or view any updates about non-life threatening incidents that occur on and around campus after dark.</p>
+          <Button variant="primary" className="btn btn-primary btn-lg outline" onClick={handleShow}>Create a new post ＋</Button>
+        </Col>
+        <Col>
+          <img className="quad-walk-img" src={quadWalk} alt="People walking across the Quad"></img>
+        </Col>
+      </Row>
+      <div className="posts-container">
+        <h2 className="alerts-gradient-text">What's Happening Now</h2>
+        <Stack gap={2} className="col-md-12 mx-auto">
+          <MakeCard posts={singlePosts} />
+        </Stack>
+      </div>
       <Modal show={show} onHide={handleClose} size="md" aria-labelledby="contained-modal-title-vcenter" centered>
         <Modal.Header closeButton>
           <Modal.Title>Create a new post</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
 
+        <Modal.Body>
           <Form>
             <Form.Group className="mb-3" controlId="titleInput">
               <Form.Label>Title</Form.Label>
@@ -190,15 +183,13 @@ singlePosts = postList.map((postItem) => {
               <Form.Control type="text" placeholder="6:30 PM" onChange={handleChange} value={timeValue} />
             </Form.Group>
           </Form>
-
         </Modal.Body>
+
         <Modal.Footer>
           <Button className="cancel-btn" variant="outline-secondary" onClick={handleClose}>
             Cancel
           </Button>
           <Button className="submit-btn" variant="success" onClick={() => {
-            //handleClose();
-            //clicked();
             var user = firebase.auth().currentUser;
             if (user) {
               // User is signed in.
@@ -211,7 +202,6 @@ singlePosts = postList.map((postItem) => {
           }}>
             Submit post
           </Button>
-          
         </Modal.Footer>
       </Modal>
     </div>
@@ -248,7 +238,7 @@ function MakePost(props) {
   return (
     <div>
       <Card className="post-card" style={{ width: '100%' }}>
-        <Card.Header className="post-header">Posted by u/anonHusky • {time}</Card.Header>
+        <Card.Header className="post-header">Posted at {time}</Card.Header>
         <Card.Body>
           <Card.Text>
             <Row>
