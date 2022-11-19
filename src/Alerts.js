@@ -35,12 +35,15 @@ export function Alerts() {
   // update - this was causing compiler error: const [show, setShow] = useState(false); // included here to compile app
   // update - this was causing compiler error: const handleShow = () => setShow(true); // included here to compile app 
 
+  // Unique background image for Alerts page
+  useEffect(() => { document.querySelector("body").classList.add("alerts-body") });
+
   return (
     <div>
-      <div className="header-container">
+      <div className="header-container special-header">
         <div className="page-header">
-          <img src={loudSpeaker} alt="Loud speaker icon" height="50em" weight="50em"></img>
-          <h1>Alerts</h1>
+          <img src={loudSpeaker} alt="Loud speaker icon" height="26em" weight="26em"></img>
+          <h1 id="page-name">Alerts</h1>
         </div>
         <div className="page-content">
           <MakeForm />
@@ -132,18 +135,12 @@ function MakeForm() {
   // also renders the Modal (popup with forum)
   return (
     <div>
-      <Row xs={1} md={2} className="g-2">
-        <Col>
-          <h2 className="h2-header alerts-gradient-text">Stay Informed</h2>
-          <p className="page-description">Do you see suspicious activity or something unusual? Planning for your commute home? Help keep yourself and other students safe and in the loop by using the Alerts forum. Report or view any updates about non-life threatening incidents that occur on and around campus after dark.</p>
-          <Button variant="primary" className="btn btn-primary btn-lg outline" onClick={handleShow}>Create a new post ＋</Button>
-        </Col>
-        <Col>
-          <img className="quad-walk-img" src={quadWalk} alt="People walking across the Quad"></img>
-        </Col>
-      </Row>
+      <h2 className="header-heading">Stay Informed</h2>
+      <p className="page-description">Do you see suspicious activity or something unusual? Are you planning for your next commute home? Help keep yourself and other students safe and in the loop by using the Alerts forum. Report and view any updates about non-life threatening incidents that occur on and around campus after dark.</p>
+      <Button variant="primary" className="btn btn-primary btn-lg outline" onClick={handleShow}>Create a new post ＋</Button>
       <div className="posts-container">
-        <h2 className="alerts-gradient-text">What's Happening Now</h2>
+        <h2 className="posts-header">What's Happening Now</h2>
+        <p>View real-time reports from students about advisories, crime, and other safety related situations.</p>
         <Stack gap={2} className="col-md-12 mx-auto">
           <MakeCard posts={singlePosts} />
         </Stack>
@@ -217,8 +214,8 @@ function MakeCard(props) {
   const posts = props.posts;
 
   return (
-    <Card bg="transparent" style={{ width: '100%' }}>
-      <Card.Body>
+    <Card className="post-cards-container" bg="transparent" style={{ width: '100%' }}>
+      <Card.Body className="post-cards-body" >
         <Stack gap={3} className="col-md-12 mx-auto">
           {posts}
         </Stack>
@@ -239,13 +236,13 @@ function MakePost(props) {
   return (
     <div>
       <Card className="post-card" style={{ width: '100%' }}>
-        <Card.Header className="post-header">Posted at {time}</Card.Header>
+        <Card.Header className="post-header">Posted by u/anonhusky • {time}</Card.Header>
         <Card.Body>
-          <Card.Text>
-            <Row>
+          <Card.Text className="post-text">
+            <Row className="post-title-container">
               <span className="post-title">
                 {title}
-                <Badge className="post-tag" bg="info">{incident}</Badge>
+                <Badge className="post-tag" bg="#D6E4E2">{incident}</Badge>
               </span>
             </Row>
             <Row>

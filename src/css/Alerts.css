@@ -1,14 +1,12 @@
 /* CSS used only for Alerts page */
-.alerts-gradient-text {
-    background-image: linear-gradient(to right, #BCE8E1 15%, #F6FF81 50%);
-    background-clip: text;
-    color: transparent;
-}
-
-.quad-walk-img {
-    height: auto;
-    width: 100%;
-    padding-bottom: 40px;
+.alerts-body {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url('~/public/img/quad-walk.png');
+    background-repeat: no-repeat;
 }
 
 .btn {
@@ -35,30 +33,68 @@
     margin: 10px;
 }
 
+.post-cards-container {
+    border: transparent;
+}
+
+.post-cards-body {
+    padding: 0px;
+}
+
+.posts-header {
+    color: white;
+    font-size: 55px;
+    text-align: center;
+    margin: 0px 0px 10px;
+}
+
 .posts-container {
     margin-top: 100px;
 }
 
 .post-card {
+    background-color: #161B21;
     margin: 8px 0;
-    border-width: 4px;
+    border-color: #2F343A;
+    border-width: 2px;
     border-radius: 10px;
 }
 
 .post-header {
     color: #677189;
-    font-weight: 300;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0px 14px;
+}
+
+.post-text {
+    padding-top: 10px;
+}
+
+.post-text.card-text {
+    margin-left: 10px;
+}
+
+.post-title-container {
+    display: inline-block;
+
 }
 
 .post-title {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 400;
+    display: inline;
 }
 
 .post-tag {
-    font-size: medium;
-    font-weight: 400;
-    margin-left: 10px;
+    color: #294642;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #b5ebe3;
+    padding: 8px 18px;
+    border-radius: 20px;
+    margin-left: 15px;
+    display: inline;
 }
 
 .post-location {

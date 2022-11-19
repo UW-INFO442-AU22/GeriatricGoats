@@ -19,7 +19,7 @@ export function AboutUs() {
                      <h3 className="member-name">Jennifer Do</h3>
                      <h4 className="member-role">UX/UI Designer</h4>
                      <p className="student-profile">Informatics Student at the University of Washington</p>
-                     <p className="student-profile">Class of 2022</p>
+                     <p className="student-profile">Class of 2023</p>
                   </Col>
                   <Col>
                      <img src={logo} alt="Stella Kim from GeriatricGoats" height="100px" width="100px"></img>
@@ -33,7 +33,7 @@ export function AboutUs() {
                      <h3 className="member-name">Trinity Martinez</h3>
                      <h4 className="member-role">Role</h4>
                      <p className="student-profile">Informatics Student at the University of Washington</p>
-                     <p className="student-profile">Class of 2022</p>
+                     <p className="student-profile">Class of 2023</p>
                   </Col>
                   <Col>
                      <img src={logo} alt="Cassie Nguyen from GeriatricGoats" height="100px" width="100px"></img>
@@ -47,7 +47,7 @@ export function AboutUs() {
                      <h3 className="member-name">Thomas Wilson</h3>
                      <h4 className="member-role">Role</h4>
                      <p className="student-profile">Informatics Student at the University of Washington</p>
-                     <p className="student-profile">Class of 2022</p>
+                     <p className="student-profile">Class of 2023</p>
                   </Col>
                </Row>
             </div>

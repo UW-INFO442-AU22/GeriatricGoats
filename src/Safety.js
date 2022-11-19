@@ -1,4 +1,5 @@
 import "./css/Safety.css";
+import { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
 import ResourceCard from "./Card.js";
 import safecampusImg from "./img/safecampus.jpg";
@@ -9,17 +10,21 @@ import shield from "./img/shield.png";
 // Other general safety resources page
 
 export function Safety() {
+
+  // Unique background image for Safety page
+  useEffect(() => { document.querySelector("body").classList.add("safety-body") });
+
   return (
     <div>
       <div className="header-container">
         <div className="page-header">
-          <img src={shield} alt="Shield icon" height="50em" weight="50em"></img>
-          <h1>Safety</h1>
+          <img src={shield} alt="Shield icon" height="26em" weight="26em"></img>
+          <h1 id="page-name">Safety</h1>
         </div>
         <Row xs={1} md={2} className="g-2">
           <Col>
-            <h2 className="safety-gradient-text">Make Your Way Back Home</h2>
-            <p>Your safety and well-being are important. Make sure you are always protecting yourself by learning more about general safety tips and UW's additional incident prevention services.</p>
+            <h2 className="header-heading">Make Your Way Back Home</h2>
+            <p className="page-description">Your safety and well-being are important. Make sure you are always protecting yourself by learning more about general safety tips and UW's additional incident prevention services.</p>
           </Col>
           <Col>
             <iframe
@@ -35,7 +40,7 @@ export function Safety() {
         </Row>
       </div>
       <div className="cards-container">
-        <h2 className="special-h2 commute-gradient-text">Explore Additional Resources</h2>
+        <h2 className="cards-header">Explore Additional Resources</h2>
         <Row xs={1} md={3} className="g-4">
           <Col>
             <ResourceCard

@@ -1,45 +1,63 @@
+/* CSS used only for resource cards */
 .resource-card {
-    border-radius: 5px;
-    height: 450px;
+    height: 700px;
+    background-color: #161B21;
+    border-color: transparent;
+    border-width: 0px;
+    border-radius: 0px;
+}
+
+.card-header {
+    color: #677189;
+    font-size: 15px;
+    border: transparent;
+    margin: 20px 10px 0;
 }
 
 .card-img {
-    height: 450px;
+    height: 30%;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 0px;
 }
 
-.card-overlay {
+.card-title {
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 20px 30px 0px;
+}
+
+/* .card-overlay {
     position: absolute;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.65);
-    border-radius: 5px;
-}
-
-.card-title {
-    font-size: 30px;
-    font-weight: 500;
-    margin: 20px 10px;
-}
+    border-radius: 0px;
+} */
 
 .card-text {
+    font-size: 15px;
     font-weight: 200;
-    margin: 20px 10px;
+    text-align: left;
+    margin: 0px 30px;
 }
 
-.card .btn-primary {
-    color: #161B21;
-    background-color: #F6FF81;
-    border-color: #F6FF81;
+.card-btn {
+    margin: 0;
     border-radius: 50px;
-    margin: 20px 10px;
+    padding: 10px;
+    margin: 30px 90px;
+}
+
+.btn-primary.outline {
+    border: 2px solid #F6FF81;
+    color: #F6FF81;
 }
 
 .card .btn-primary:hover {
     color: #161B21;
-    background-color: #c2c965;
-    border-color: #c2c965;
+    background-color: #F6FF81;
+    border-color: #F6FF81;
 }
