@@ -32,15 +32,13 @@ function NavbarMenu() {
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="navbarNav">
-               <Nav className="navbar-nav ml-auto">
+               <Nav className="navbar-nav mr-auto">
                   <Nav.Link href="/">Home</Nav.Link>
                   <Nav.Link href="alerts">Alerts</Nav.Link>
                   <Nav.Link href="commute">Commute</Nav.Link>
                   <Nav.Link href="safety">Safety</Nav.Link>
                   <Nav.Link href="about">About Us</Nav.Link>
-                  {/*<Nav.Link href="log-in">Log In</Nav.Link> */}
-
-                  <Button class="signIn" variant="primary" onClick={() => {
+                  <Button className="sign-in" variant="primary" onClick={() => {
                      var user = firebase.auth().currentUser;
                      if (user) {
                      // User is signed in.
@@ -54,10 +52,9 @@ function NavbarMenu() {
                      Log In
                   </Button>
 
-                  <Button class="signOut" variant="primary" onClick={signMeOut}> 
+                  <Button className="sign-out" variant="primary" onClick={signMeOut}> 
                      Log Out
                   </Button>
-
                </Nav>
             </Navbar.Collapse>
          </Container>

@@ -6,17 +6,23 @@ body {
 
 h1 {
     color: white;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 h2 {
     font-weight: 600;
+    margin: 0px 0px 30px 0px;
 }
 
 p {
     color: white;
     font-weight: 300;
     line-height: 1.8em;
+}
+
+/* Pages (e.g., Alerts, Commute, Safety) */
+.page-header h1 {
+    padding-left: 10px;
 }
 
 /* Cards */
