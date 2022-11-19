@@ -19,7 +19,7 @@ export function Commute() {
         </div>
         <Row xs={1} md={2} className="g-2">
           <Col className="img-col">
-            <img className="buses-img" src={buses} alt="Metro buses on the road"></img>
+            <img className="buses-img" src={buses} alt="Vehicles on the road on UW Campus"></img>
           </Col>
           <Col>
             <h2 className="commute-gradient-text">Play It Safe</h2>
@@ -41,7 +41,7 @@ export function Commute() {
           <Col>
             <ResourceCard
               imgLink={nightwalkImg}
-              imgAlt={"UW campus at night"}
+              imgAlt={"The Quad at night"}
               title="NightWalk"
               description="Uniformed security guards provide a walking escort to community members within the campus locations and the residential area north of 45th St., and to the UW Tower location. Guards can also assist building and office lockouts, as well as jump start dead car batteries."
               btnLink="https://www.google.com/maps/d/viewer?mid=1AvFh3QRT8B2ygMYX6FbAuVh3xCE&ll=47.659230905970134%2C-122.30881695&z=15" />
@@ -49,7 +49,7 @@ export function Commute() {
           <Col>
             <ResourceCard
               imgLink={lightrailImg}
-              imgAlt={"Lightrail"}
+              imgAlt={"Link Light Rail"}
               title="Bus + Light Rail"
               description="With over a dozen bus routes from campus and two light rail stations (U District Station west of campus and the University of Washington station located south of campus), students can leverage their U-Pass to commute at night time instead of walking home by themselves."
               btnLink="https://pugetsound.onebusaway.org/#75402" />

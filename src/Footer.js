@@ -7,7 +7,7 @@ function Footer() {
    return (
       <footer className="footer">
          <div className="footer-items">
-            <img src={logo} alt="Make It home logo" />
+            <img src={logo} alt="Make It Home logo" />
             <span>&copy; 2022 UW INFO 442 Team 7: GeriatricGoats • All rights reserved</span>
          </div>
       </footer>

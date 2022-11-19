@@ -56,7 +56,7 @@ export function Safety() {
           <Col>
             <ResourceCard
               imgLink={safezoneImg}
-              imgAlt={"UW SafeZone App"}
+              imgAlt={"UW SafeZone App illustration"}
               title="UW SafeZone"
               description="The SafeZone mobile app allows UW students to have immediate access to UW police and local emergency services anyhere in the U District. Call for medical assistance, emergencies, and share your location with police officers."
               btnLink="https://police.uw.edu/services/safe-zone-app/" />

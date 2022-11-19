@@ -6,7 +6,7 @@ import "./css/Home.css";
 export function Home() {
     return (
         <div>
-            <div className="hero-image">
+            <div className="hero-image" aria-label="Suzzallo Library at night"> 
                 <div className="overlay">
                     <h1>Stay Informed, Play It Safe, Make It Home.</h1>
                     <p>

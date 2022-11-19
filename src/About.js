@@ -38,9 +38,9 @@ export function AboutUs() {
                   <Col>
                      <img src={logo} alt="Cassie Nguyen from GeriatricGoats" height="100px" width="100px"></img>
                      <h3 className="member-name">Cassie Nguyen</h3>
-                     <h4 className="member-role">Role</h4>
+                     <h4 className="member-role">Role</h4> 
                      <p className="student-profile">Informatics Student at the University of Washington</p>
-                     <p className="student-profile">Class of 2022</p>
+                     <p className="student-profile">Class of 2023</p>
                   </Col>
                   <Col>
                      <img src={logo} alt="Thomas Wilson from GeriatricGoats" height="100px" width="100px"></img>
