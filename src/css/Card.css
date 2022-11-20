@@ -1,6 +1,6 @@
 /* CSS used only for resource cards */
 .resource-card {
-    height: 700px;
+    height: 800px;
     background-color: #161B21;
     border-color: transparent;
     border-width: 0px;
@@ -22,26 +22,37 @@
 
 .card-title {
     color: white;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 500;
-    margin: 20px 30px 0px;
+    margin: 40px 30px 0px;
 }
 
-/* .card-overlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.65);
-    border-radius: 0px;
-} */
-
 .card-text {
-    font-size: 15px;
-    font-weight: 200;
+    color: #677189;
+    font-size: 17px;
+    font-weight: 300;
     text-align: left;
     margin: 0px 30px;
+}
+
+.operation-hours {
+    color: #677189;
+    font-weight: 300;
+    margin: 20px 0px;
+}
+
+.days-block {
+    width: 110px;
+}
+
+.time-block {
+    width: 190px;
+    padding-left: 0px;
+}
+
+.days, .hours {
+    color: white;
+    margin-bottom: 4px;
 }
 
 .card-btn {

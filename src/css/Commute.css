@@ -13,13 +13,6 @@
    margin: 100px;
 }
 
-.cards-header {
-   color: white;
-   font-size: 55px;
-   text-align: center;
-   margin: 250px 0px;
-}
-
 .content-container {
    margin: 300px 160px 10px;
 }
@@ -37,6 +30,13 @@
 .header-img {
    width: 100%;
    padding-right: 70px;
+}
+
+.cards-header {
+   color: white;
+   font-size: 55px;
+   text-align: center;
+   margin: 250px 0px;
 }
 
 /* Responsive styling */

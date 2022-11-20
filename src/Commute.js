@@ -44,16 +44,20 @@ export function Commute() {
             <ResourceCard
               imgLink={nightrideImg}
               imgAlt={"NightRide shuttle"}
+              days={"Mon - Fri"}
+              hours={"8:00 PM - 1:30 AM"}
               title="NightRide"
-              description="A fare-free, safe and easy way for Husky Card holders to get home at night. NightRide shuttles pick up passengers at eight campus locations and drop off passengers anywhere within one of two zones after the campus location stops."
+              description="NightRide shuttles pick up passengers at eight campus locations and drop off passengers anywhere within one of two zones after the campus location stops."
               btnLink="https://transportation.uw.edu/getting-around/shuttles/nightride" />
           </Col>
           <Col>
             <ResourceCard
               imgLink={nightwalkImg}
               imgAlt={"The Quad at night"}
-              title="NightWalk"
-              description="Uniformed security guards provide a walking escort to community members within the campus locations and the residential area north of 45th St., and to the UW Tower location. Guards can also assist building and office lockouts, as well as jump start dead car batteries."
+              days={"Sun - Sat"}
+              hours={"6:30 PM - 2:00 AM"}
+              title="Husky NightWalk"
+              description="Uniformed security guards provide a walking escort to community members within the campus locations and the residential area north of 45th St., and to the UW Tower location."
               btnLink="https://www.google.com/maps/d/viewer?mid=1AvFh3QRT8B2ygMYX6FbAuVh3xCE&ll=47.659230905970134%2C-122.30881695&z=15" />
           </Col>
           <Col>
@@ -61,8 +65,10 @@ export function Commute() {
               imgLink={lightrailImg}
               imgAlt={"Link Light Rail"}
               title="Bus + Light Rail"
-              description="With over a dozen bus routes from campus and two light rail stations (U District Station west of campus and the University of Washington station located south of campus), students can leverage their U-Pass to commute at night time instead of walking home by themselves."
-              btnLink="https://pugetsound.onebusaway.org/#75402" />
+              days={"Sun - Sat"}
+              hours={"5:00 AM - 1:00 AM"}
+              description="Students can access over a dozen bus routes from campus and two light rail stations (U District Station west of campus and the University of Washington station located south of campus)."
+              btnLink="https://www.soundtransit.org/" />
           </Col>
         </Row>
       </div>

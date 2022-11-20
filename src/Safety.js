@@ -47,7 +47,7 @@ export function Safety() {
               imgLink={safecampusImg}
               imgAlt={"Drumheller Fountain"}
               title="SafeCampus"
-              description="UW’s violence-prevention and response program which can help you navigate many situations, whether they impact you or someone you know — including threats, stalking, sexual assault, relationship violence, harassment, suicide concerns, workplace violence and more."
+              description="UW’s violence-prevention and response program which can help you navigate many situations including threats, stalking, sexual assault, relationship violence, harassment, suicide concerns, workplace violence and more."
               btnLink="https://www.washington.edu/safecampus/" />
           </Col>
           <Col>
