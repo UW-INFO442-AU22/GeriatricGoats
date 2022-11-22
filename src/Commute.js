@@ -39,6 +39,7 @@ export function Commute() {
       </div>
       <div className="cards-container">
         <h2 className="cards-header">Explore Commuting Options</h2>
+        <p>Find </p>
         <Row xs={1} md={3} className="g-4">
           <Col>
             <ResourceCard
