@@ -11,10 +11,10 @@ With the aim of increasing safety for UW students in the University District nei
 ## Features
 - Forum for students to report non-life threatening incidents
 - Guided template when uploading posts
-  - Incident type (e.g. loud noise, fire, police blockage, etc.)
+  - Incident title
+  - Incident type (crime, advisory, other safety notices)
   - Incident location - areas to avoid
-  - Incident time - limited to the evening
-  - Upvote posts to corroborate incidents
+  - Incident time
 - Commuting resources (e.g., Night Ride, Husky NightWalk, etc.)
 - General safety resources for students
 
