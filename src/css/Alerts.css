@@ -84,6 +84,7 @@
     font-size: 28px;
     font-weight: 400;
     display: inline;
+    color: white;
 }
 
 .post-tag {
@@ -99,7 +100,7 @@
 
 .post-location {
     color: #677189;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
     margin: 10px 0;
 }
