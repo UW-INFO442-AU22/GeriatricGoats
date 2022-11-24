@@ -18,9 +18,29 @@
    padding-right: 4em;
 }
 
+.sign-in.btn.btn-primary, .sign-out.btn.btn-primary {
+   color: #161B21;
+   border-radius: 50px;
+   background-color: #F6FF81;
+   border: 2px solid #F6FF81;
+   padding: 6px 12px;
+   
+}
+
+.sign-in.btn.btn-primary:hover, .sign-out.btn.btn-primar:hover {
+   color: #161B21;
+   background-color: #F6FF81;
+   border-color: #F6FF81;
+}
+
 /* Responsive styling */
-@media screen and (min-width: 820px) {
+/* Large devices */
+@media screen and (min-width: 992px) {
    .navbar-brand {
       padding-left: 3em;
+   }
+
+   .sign-in.btn.btn-primary, .sign-out.btn.btn-primary {
+      margin: 0px 10px;
    }
 }
