@@ -25,25 +25,21 @@
 
 .overlay h1,
 .overlay p {
-    max-width: 400px;
+    max-width: 300px;
 }
 
 .overlay h1 {
-    font-size: 3em;
-    margin: 0px 0px 30px 0px;
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0px 0px 20px 0px;
 }
 
 .overlay p {
-    font-size: 1.2em;
+    font-size: 20px;
     font-weight: 200;
     line-height: 1.8em;
     color: white;
-    margin: 0 0 3em 0;
-}
-
-.overlay .btn {
-    margin: 0;
-    border-radius: 50px;
+    margin: 0px 0px 20px 0px;
 }
 
 .overlay .btn.outline {
@@ -62,24 +58,49 @@
 }
 
 /* Responsive styling */
-@media screen and (min-width: 820px) {
+/* Small devices */
+@media screen and (min-width: 576px) {
 
     .overlay h1,
     .overlay p {
-        max-width: 1000px;
+        max-width: 460px;
     }
 
     .overlay h1 {
-        font-size: 4em;
-        margin: 0;
+        font-size: 40px;
+    }
+}
+
+/* Medium devices */
+@media screen and (min-width: 768px) {
+
+    .overlay h1,
+    .overlay p {
+        max-width: 600px;
+    }
+
+    .overlay h1 {
+        font-size: 52px;
     }
 
     .overlay p {
-        font-size: 1.3em;
-        margin: 1em 0;
+        font-size: 22px;
+    }
+}
+
+/* Large devices */
+@media screen and (min-width: 992px) {
+
+    .overlay h1,
+    .overlay p {
+        max-width: 700px;
     }
 
-    .overlay .btn {
-        margin: 2em 0;
+    .overlay h1 {
+        font-size: 60px;
+    }
+
+    .overlay p {
+        font-size: 22px;
     }
 }

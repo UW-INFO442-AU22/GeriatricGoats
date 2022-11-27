@@ -12,7 +12,7 @@ export function Home() {
                     <p>
                         Track incidents near and around campus after dark through real-time reports and find resources to make safe commuting decisions.
                     </p>
-                    <Link className="btn btn-primary btn-lg outline" to="../alerts" role="button">Get started</Link>
+                    <Link className="btn btn-primary btn-lg outline home-btn" to="../alerts" role="button">Get started</Link>
                 </div>
             </div>
         </div>
