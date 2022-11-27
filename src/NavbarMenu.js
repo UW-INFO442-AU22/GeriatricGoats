@@ -4,10 +4,10 @@ import logo from "./img/logo.svg";
 import { googleSignIn } from "./LogIn";
 import { signMeOut } from "./SignOut";
 import { initializeApp } from 'firebase/app';
-import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import "firebase/compat/database";
 import "firebase/compat/storage";
+
 // Initializing FB app:
 const firebaseConfig = {
    apiKey: "AIzaSyC3_6IAbYBbJiGzXGK8WVOXIkxAmtUoY0w",
@@ -21,7 +21,6 @@ const app = initializeApp(firebaseConfig);
 
 
 // Navigation menu at the top of every page
-
 function NavbarMenu() {
    return (
       <Navbar collaspseOnSelect expand="lg" className="color-nav" variant="dark">
@@ -38,21 +37,10 @@ function NavbarMenu() {
                   <Nav.Link href="commute">Commute</Nav.Link>
                   <Nav.Link href="safety">Safety</Nav.Link>
                   <Nav.Link href="about">About Us</Nav.Link>
-                  <Button className="sign-in" variant="primary" onClick={() => {
-                     var user = firebase.auth().currentUser;
-                     if (user) {
-                     // User is signed in.
-                     //<span style="color: red;" id="span-to-change-color">I am red(Click Me)</span>
-                     } else {
-                     // No user is signed in.
-                     //<span style="color: red;" id="span-to-change-color">not logged in</span>
-                     googleSignIn();
-                     }
-                  }}>
+                  <Button className="sign-in" variant="primary" onClick={googleSignIn}>
                      Log In
                   </Button>
-
-                  <Button className="sign-out" variant="primary" onClick={signMeOut}> 
+                  <Button className="sign-out" variant="secondary" onClick={signMeOut}> 
                      Log Out
                   </Button>
                </Nav>
