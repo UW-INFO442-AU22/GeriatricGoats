@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
   Card,
-  Col,
   Row,
   Modal,
   Form,
@@ -11,7 +10,6 @@ import {
 } from "react-bootstrap";
 import "./css/Alerts.css";
 import loudSpeaker from "./img/loud-speaker.png";
-import quadWalk from "./img/quad-walk.png"
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import "firebase/compat/database";
@@ -40,14 +38,12 @@ export function Alerts() {
 
   return (
     <div>
-      <div className="header-container special-header">
-        <div className="page-header">
-          <img src={loudSpeaker} alt="Loud speaker icon" height="26em" weight="26em"></img>
-          <h1 id="page-name">Alerts</h1>
-        </div>
-        <div className="page-content">
-          <MakeForm />
-        </div>
+      <div className="page-header">
+        <img src={loudSpeaker} alt="Loud speaker icon" height="26em" weight="26em"></img>
+        <h1 id="page-name">Alerts</h1>
+      </div>
+      <div className="page-content">
+        <MakeForm />
       </div>
     </div>
   )
@@ -88,7 +84,6 @@ function MakeForm() {
       setTimeValue(newValue);
     }
   }
-
 
   // event that happens when add post button is clicked
   // sends filled in form data to firebase
@@ -137,7 +132,10 @@ function MakeForm() {
     <div>
       <h2 className="header-heading">Stay Informed</h2>
       <p className="page-description">Do you see suspicious activity or something unusual? Are you planning for your next commute home? Help keep yourself and other students safe and in the loop by using the Alerts forum. Report and view any updates about non-life threatening incidents that occur on and around campus after dark.</p>
-      <Button variant="primary" className="btn btn-primary btn-lg outline" onClick={handleShow}>Create a new post ＋</Button>
+      <div className="btn-container">
+        <Button variant="primary" className="btn btn-primary btn-lg outline" onClick={handleShow}>Create a new post ＋</Button>
+      </div>
+      {/* <Button variant="primary" className="btn btn-primary btn-lg outline" onClick={handleShow}>Create a new post ＋</Button> */}
       <div className="posts-container">
         <h2 className="posts-header">What's Happening Now</h2>
         <p>View real-time reports from students about advisories, crime, and other safety related situations.</p>

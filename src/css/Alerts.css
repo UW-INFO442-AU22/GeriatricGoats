@@ -9,14 +9,48 @@
     background-repeat: no-repeat;
 }
 
+.page-header,
+.page-content {
+    margin: 0px 40px 0px 40px;
+}
+
+/* Top page content */
+.page-header,
+.header-heading,
+.page-description {
+    filter: drop-shadow(6px 6px 50px black);
+}
+
+.page-header {
+    margin-top: 60px;
+}
+
+.header-heading {
+    font-size: 50px;
+    margin: 40px 0px 0px;
+    text-align: center;
+}
+
+.page-description {
+    font-size: 18px;
+    margin-top: 0px;
+    line-height: 1.6em;
+    text-align: center;
+}
+
+/* Create post button */
+.btn-container {
+    text-align: center;
+}
+
 .btn {
     margin: 35px 0 50px 0;
     border-radius: 50px;
 }
 
 .btn-primary.outline {
-    border: 2px solid #F6FF81;
     color: #F6FF81;
+    border: 2px solid #F6FF81;
     background-color: transparent;
 }
 
@@ -25,31 +59,31 @@
     background-color: #F6FF81;
 }
 
-.cancel-btn {
-    margin: 10px 0 10px 10px;
-}
-
-.submit-btn {
-    margin: 10px;
-}
-
-.post-cards-container {
-    border: transparent;
-}
-
-.post-cards-body {
-    padding: 0px;
+/* Bottom page content (posts section) */
+.posts-container {
+    margin-top: 80px;
 }
 
 .posts-header {
     color: white;
-    font-size: 55px;
+    font-size: 43px;
     text-align: center;
-    margin: 0px 0px 10px;
+    margin-bottom: 0px;
 }
 
-.posts-container {
-    margin-top: 100px;
+.posts-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Posts cards */
+.post-cards-container {
+    border: transparent;
+    margin-bottom: 30px;
+}
+
+.post-cards-body {
+    padding: 0px;
 }
 
 .post-card {
@@ -77,14 +111,18 @@
 
 .post-title-container {
     display: inline-block;
+}
 
+.row {
+    margin-left: 0px;
 }
 
 .post-title {
+    color: white;
     font-size: 28px;
     font-weight: 400;
+    padding-left: 0px;
     display: inline;
-    color: white;
 }
 
 .post-tag {
@@ -103,6 +141,7 @@
     font-size: 20px;
     font-weight: 300;
     margin: 10px 0;
+    padding-left: 0px;
 }
 
 .post-upvote {
@@ -114,9 +153,54 @@
     margin-right: 10px;
 }
 
+/* Pop-up post form */
+.cancel-btn {
+    margin: 10px 0 10px 10px;
+}
+
+.submit-btn {
+    margin: 10px;
+}
+
 /* Responsive styling */
-@media screen and (min-width: 820px) {
-    .quad-walk-img {
-        padding-left: 20px;
+/* Medium devices */
+@media screen and (min-width: 768px) {
+
+    .page-header,
+    .page-content {
+        margin: 0px 100px 0px 100px;
+    }
+
+    .page-header {
+        margin-top: 120px;
+    }
+
+    .header-heading,
+    .page-description,
+    .btn-container {
+        text-align: left;
+    }
+
+    .page-description,
+    .posts-container p {
+        font-size: 20px;
+    }
+}
+
+/* Large devices */
+@media screen and (min-width: 992px) {
+
+    .page-header,
+    .page-content {
+        margin: 0px 150px 0px 150px;
+    }
+
+    .page-header {
+        margin-top: 120px;
+    }
+
+    .page-description,
+    .posts-container p {
+        font-size: 20px;
     }
 }
