@@ -27,7 +27,7 @@
 
 .header-heading {
     font-size: 50px;
-    margin: 40px 0px 0px;
+    margin: 40px 0px 40px;
     text-align: center;
 }
 
@@ -61,14 +61,18 @@
 
 /* Bottom page content (posts section) */
 .posts-container {
-    margin-top: 80px;
+    margin-top: 100px;
 }
 
 .posts-header {
     color: white;
     font-size: 43px;
     text-align: center;
-    margin-bottom: 0px;
+    margin: 40px 0px;
+}
+
+.posts-description {
+    text-align: center;
 }
 
 .posts-container p {
@@ -202,5 +206,9 @@
     .page-description,
     .posts-container p {
         font-size: 20px;
+    }
+
+    .posts-description {
+        text-align: center;
     }
 }

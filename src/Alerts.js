@@ -138,7 +138,7 @@ function MakeForm() {
       {/* <Button variant="primary" className="btn btn-primary btn-lg outline" onClick={handleShow}>Create a new post ＋</Button> */}
       <div className="posts-container">
         <h2 className="posts-header">What's Happening Now</h2>
-        <p>View real-time reports from students about advisories, crime, and other safety related situations.</p>
+        <p className="posts-description">View real-time reports from students about advisories, crime, and other safety related situations.</p>
         <Stack gap={2} className="col-md-12 mx-auto">
           <MakeCard posts={singlePosts} />
         </Stack>
@@ -152,7 +152,7 @@ function MakeForm() {
           <Form>
             <Form.Group className="mb-3" controlId="titleInput">
               <Form.Label>Title</Form.Label>
-              <Form.Control type="text" placeholder="Verbal altercation on the ave by Thai Tom" onChange={handleChange} value={titleValue} />
+              <Form.Control type="text" placeholder="Verbal altercation on the Ave" onChange={handleChange} value={titleValue} />
               <Form.Text className="text-muted">
                 Try to be as descriptive as you can!
               </Form.Text>
