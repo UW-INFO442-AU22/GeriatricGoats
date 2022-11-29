@@ -17,30 +17,28 @@ export function Commute() {
 
   return (
     <div>
-      <div className="header-container">
-        <div className="page-header">
-          <img src={walkingIcon} alt="Walking figure icon" height="26em" weight="26em"></img>
-          <h1 id="page-name">Commute</h1>
-        </div>
-        <h2 className="header-heading">Play It Safe</h2>
-        <p className="page-description">The University of Washington campus is a large place, and attempting to navigate dimly lit pathways and sidewalks in the dark can make it all the more daunting to walk alone at night. Learn more about alternatives to walking home and explore commuting resources covered by your U-Pass.</p>
+      <div className="page-header">
+        <img src={walkingIcon} alt="Walking figure icon" height="26em" weight="26em"></img>
+        <h1 className="page-name">Commute</h1>
       </div>
-      <div className="content-container">
+      <h1 className="commute-header-heading">Play It Safe</h1>
+      <p id="commute-page-description">The University of Washington campus is a large place, and attempting to navigate dimly lit pathways and sidewalks in the dark can make it all the more daunting to walk alone at night. Learn more about alternatives to walking home and explore commuting resources covered by your U-Pass.</p>
+      <div className="upass-container">
         <Row xs={1} md={2} className="g-2">
           <Col>
-            <img className="header-img" src={huskyCard} alt="Dubs' Husky card" />
+            <img className="upass-img" src={huskyCard} alt="Dubs' Husky card" />
           </Col>
-          <Col>
-            <h3 className="content-subheading">More Than A Bus Pass</h3>
-            <p className="page-description">Loaded directly onto the Husky Card, the U-PASS provides members with unlimited rides on regional buses, commuter trains, light rail and water taxis as well as full fare coverage on vanpools.</p>
+          <Col className="upass-content">
+            <h2 className="upass-heading">More Than A Bus Pass</h2>
+            <p className="upass-description">Loaded directly onto the Husky Card, the U-PASS provides members with unlimited rides on regional buses, commuter trains, light rail and water taxis as well as full fare coverage on vanpools.</p>
             <Button className="learn-more-btn btn-primary btn-lg outline" href="https://transportation.uw.edu/getting-here/transit/u-pass" role="button" target="_blank">Learn more</Button>
           </Col>
         </Row>
       </div>
-      <div className="cards-container">
-        <h2 className="cards-header">Explore Commuting Options</h2>
-        <p>Find </p>
-        <Row xs={1} md={3} className="g-4">
+      <div className="commute-cards-container">
+        <h1 className="commute-cards-header">Explore Commuting Options</h1>
+        <p className="commute-cards-descr">From NightRide to Husky NightWalk, find a commuting option that works for you.</p>
+        <Row sm={1} md={2} lg={3} className="g-4">
           <Col>
             <ResourceCard
               imgLink={nightrideImg}

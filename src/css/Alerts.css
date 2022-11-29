@@ -11,7 +11,7 @@
 
 .page-header,
 .page-content {
-    margin: 0px 40px 0px 40px;
+    margin: 0px 30px;
 }
 
 /* Top page content */
@@ -83,7 +83,7 @@
 /* Posts cards */
 .post-cards-container {
     border: transparent;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .post-cards-body {
@@ -172,7 +172,7 @@
 
     .page-header,
     .page-content {
-        margin: 0px 100px 0px 100px;
+        margin: 0px 100px;
     }
 
     .page-header {
@@ -196,7 +196,7 @@
 
     .page-header,
     .page-content {
-        margin: 0px 150px 0px 150px;
+        margin: 0px 150px;
     }
 
     .page-header {
@@ -205,7 +205,8 @@
 
     .page-description,
     .posts-container p {
-        font-size: 20px;
+        font-size: 22px;
+        line-height: 1.8em;
     }
 
     .posts-description {

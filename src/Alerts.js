@@ -40,7 +40,7 @@ export function Alerts() {
     <div>
       <div className="page-header">
         <img src={loudSpeaker} alt="Loud speaker icon" height="26em" weight="26em"></img>
-        <h1 id="page-name">Alerts</h1>
+        <h1 className="page-name">Alerts</h1>
       </div>
       <div className="page-content">
         <MakeForm />
@@ -130,14 +130,14 @@ function MakeForm() {
   // also renders the Modal (popup with forum)
   return (
     <div>
-      <h2 className="header-heading">Stay Informed</h2>
+      <h1 className="header-heading">Stay Informed</h1>
       <p className="page-description">Do you see suspicious activity or something unusual? Are you planning for your next commute home? Help keep yourself and other students safe and in the loop by using the Alerts forum. Report and view any updates about non-life threatening incidents that occur on and around campus after dark.</p>
       <div className="btn-container">
         <Button variant="primary" className="btn btn-primary btn-lg outline" onClick={handleShow}>Create a new post ＋</Button>
       </div>
       {/* <Button variant="primary" className="btn btn-primary btn-lg outline" onClick={handleShow}>Create a new post ＋</Button> */}
       <div className="posts-container">
-        <h2 className="posts-header">What's Happening Now</h2>
+        <h1 className="posts-header">What's Happening Now</h1>
         <p className="posts-description">View real-time reports from students about advisories, crime, and other safety related situations.</p>
         <Stack gap={2} className="col-md-12 mx-auto">
           <MakeCard posts={singlePosts} />

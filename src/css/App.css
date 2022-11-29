@@ -36,7 +36,7 @@ p {
     float: left;
 }
 
-#page-name {
+.page-name {
     color: #F6FF81;
     margin-left: 10px;
     font-size: 26px;

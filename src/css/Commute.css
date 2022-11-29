@@ -7,45 +7,174 @@
    background-position: center top;
    background-image: url('~/public/img/buses.png');
    background-repeat: no-repeat;
- }
-
-.header-container {
-   margin: 100px;
 }
 
-.content-container {
-   margin: 300px 160px 10px;
+/* Top page content */
+.page-header, .commute-header-heading, #commute-page-description {
+   filter: drop-shadow(6px 6px 30px black);
 }
 
-.content-subheading {
+.page-header {
+   margin-top: 60px;
+}
+
+.commute-header-heading {
+   font-size: 50px;
+   margin: 40px 0px;
+   text-align: center;
+}
+
+#commute-page-description {
+   font-size: 18px;
+   margin: 0px 30px;
+   line-height: 1.6em;
+   text-align: center;
+}
+
+/* U-Pass content section */
+.upass-container {
+   margin: 100px 30px;
+   text-align: center;
+}
+
+.upass-img {
+   width: 100%;
+}
+
+.upass-heading {
    color: white;
-   font-size: 36px;
+   font-size: 40px;
    font-weight: 600;
+   margin: 40px 0px;
+}
+
+.upass-description,
+.commute-cards-descr {
+   font-size: 18px;
+   line-height: 1.6em;
+   text-align: center;
 }
 
 .learn-more-btn {
-   margin-top: 18px;
+   margin-top: 30px;
 }
 
-.header-img {
-   width: 100%;
-   padding-right: 70px;
+/* Bottom page content (explore) */
+.commute-cards-container {
+   margin: 0px 30px 40px;
 }
 
-.cards-header {
+.commute-cards-header {
    color: white;
-   font-size: 55px;
+   font-size: 54px;
    text-align: center;
-   margin: 0px 0px 10px;
+   margin: 0px 0px 30px;
 }
+
+.commute-cards-container p {
+   margin-bottom: 40px;
+}
+
 
 /* Responsive styling */
-/* @media screen and (min-width: 820px) {
-   .header-container, .cards-container {
-      margin: 100px 160px;
+/* Small devices */
+@media screen and (min-width: 576px) {
+   .upass-container {
+      margin-top: 150px;
    }
 
-   .buses-img {
-      padding-right: 30px;
+   .commute-cards-header {
+      font-size: 50px;
    }
-} */
+}
+
+/* Medium devices */
+@media screen and (min-width: 768px) {
+   #commute-page-description {
+      font-size: 20px;
+      text-align: left;
+      margin: 0px 100px;
+   }
+
+   .upass-container, .commute-cards-container {
+      margin: 100px 100px;
+   }
+
+   .upass-img {
+      padding: 170px 15px 0px 0px;
+   }
+
+   .upass-content {
+      padding-left: 15px;
+   }
+
+   .upass-content, .upass-description {
+      text-align: left;
+   }
+
+   .upass-heading {
+      font-size: 40px;
+      margin-bottom: 0px;
+      text-align: center;
+   }
+
+   .upass-description {
+      margin: 20px 0px;
+   }
+
+   .learn-more-btn {
+      margin-top: 10px;
+   }
+
+   .commute-cards-header {
+      font-size: 50px;
+   }
+}
+
+/* Large devices */
+@media screen and (min-width: 992px) {
+   #commute-page-description,
+   .upass-description,
+   .commute-cards-descr {
+      font-size: 22px;
+      line-height: 1.8em;
+   }
+
+   #commute-page-description {
+      margin: 0px 150px;
+   }
+
+   .upass-img {
+      padding-top: 66px;
+   }
+
+   .upass-heading {
+      font-size: 34px;
+      text-align: left;
+   }
+}
+
+/* Extra large devices */
+@media screen and (min-width: 1200px) {
+   .commute-header-heading {
+      text-align: left;
+      margin-left: 150px;
+   }
+
+   .upass-container, .commute-cards-container {
+      margin: 200px 150px;
+   }
+
+   .upass-img {
+      padding-top: 40px;
+      padding-right: 25px;
+   }
+
+   .upass-content {
+      padding-left: 25px;
+   }
+
+   .upass-heading {
+      font-size: 40px;
+   }
+}
