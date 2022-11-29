@@ -1,4 +1,16 @@
 /* CSS used only for About Us page */
+p {
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin-top: 40px;
+}
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
 .about-gradient-text {
     background-image: linear-gradient(to right, #BCE8E1 35%, #F6FF81 70%);
     background-clip: text;

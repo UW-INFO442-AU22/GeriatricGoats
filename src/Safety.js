@@ -19,7 +19,7 @@ export function Safety() {
       <div className="header-container">
         <div className="page-header">
           <img src={shield} alt="Shield icon" height="26em" weight="26em"></img>
-          <h1 id="page-name">Safety</h1>
+          <h1 className="page-name">Safety</h1>
         </div>
         <Row xs={1} md={2} className="g-2">
           <Col>
