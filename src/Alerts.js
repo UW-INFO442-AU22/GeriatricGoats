@@ -38,10 +38,6 @@ export function Alerts() {
 
   return (
     <div>
-      <div className="page-header">
-        <img src={loudSpeaker} alt="Loud speaker icon" height="26em" weight="26em"></img>
-        <h1 className="page-name">Alerts</h1>
-      </div>
       <div className="page-content">
         <MakeForm />
       </div>
@@ -130,12 +126,17 @@ function MakeForm() {
   // also renders the Modal (popup with forum)
   return (
     <div>
-      <h1 className="header-heading">Stay Informed</h1>
-      <p className="page-description">Do you see suspicious activity or something unusual? Are you planning for your next commute home? Help keep yourself and other students safe and in the loop by using the Alerts forum. Report and view any updates about non-life threatening incidents that occur on and around campus after dark.</p>
-      <div className="btn-container">
-        <Button variant="primary" className="btn btn-primary btn-lg outline" onClick={handleShow}>Create a new post ＋</Button>
+      <div className="page-info-container">
+        <div className="page-header">
+          <img src={loudSpeaker} alt="Loud speaker icon" height="26em" weight="26em"></img>
+          <h1 className="page-name">Alerts</h1>
+        </div>
+        <h1 className="page-descr-heading">Stay Informed</h1>
+        <p className="page-description">Do you see suspicious activity or something unusual? Are you planning for your next commute home? Help keep yourself and other students safe and in the loop by using the Alerts forum. Report and view any updates about non-life threatening incidents that occur on and around campus after dark.</p>
+        <div className="btn-container">
+          <Button variant="primary" className="create-post-btn btn btn-primary btn-lg outline" onClick={handleShow}>Create a new post ＋</Button>
+        </div>
       </div>
-      {/* <Button variant="primary" className="btn btn-primary btn-lg outline" onClick={handleShow}>Create a new post ＋</Button> */}
       <div className="posts-container">
         <h1 className="posts-header">What's Happening Now</h1>
         <p className="posts-description">View real-time reports from students about advisories, crime, and other safety related situations.</p>
@@ -234,7 +235,7 @@ function MakePost(props) {
   return (
     <div>
       <Card className="post-card" style={{ width: '100%' }}>
-        <Card.Header className="post-header">Posted by u/anonhusky • {time}</Card.Header>
+        <Card.Header id="post-header">Posted by u/anonhusky • {time}</Card.Header>
         <Card.Body>
           <Card.Text className="post-text">
             <Row className="post-title-container">

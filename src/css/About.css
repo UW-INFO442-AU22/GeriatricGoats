@@ -1,40 +1,148 @@
 /* CSS used only for About Us page */
-p {
-    margin-bottom: 10px;
+.about-container {
+    margin: 40px 40px;
 }
 
-h1 {
-    margin-top: 40px;
-}
-h2 {
-    margin-top: 20px;
-    margin-bottom: 10px;
+.sdg-container,
+.profiles-container {
+    margin: 100px 0px;
 }
 
-.about-gradient-text {
-    background-image: linear-gradient(to right, #BCE8E1 35%, #F6FF81 70%);
-    background-clip: text;
-    color: transparent;
-    text-align: center;
+.sdg-container img,
+.profile-row {
+    margin: 20px 0px;
+}
+
+.sdg-container img {
+    width: 100%;
+}
+
+.sdg-container iframe {
+    display: block;
+    margin: 20px auto;
+    width: 280px;
+    height: 157.5px;
 }
 
 .profile-row {
     text-align: center;
 }
 
+.profile-row img {
+    width: 60%;
+}
+
 .member-name {
-    color: white;
+    color: #F6FF81;
     font-weight: 400;
     font-size: 26px;
+    margin: 20px 0px;
 }
 
 .member-role {
-    color: #F6FF81;
-    font-weight: 300;
-    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    font-size: 22px;
 }
 
-.student-profile {
+ul {
+    list-style: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.8em;
+    padding: 0px;
+    margin: 0px;
+}
+
+.grad-year {
+    margin: 10px 0px;
+}
+
+.references-heading {
+    color: #677189;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.reference-citation {
     color: #677189;
     font-size: 12px;
+}
+
+/* Responsive styling */
+/* Extra large devices */
+@media screen and (min-width: 576px) {
+    .sdg-container iframe {
+        margin: 50px auto;
+        width: 448px;
+        height: 252px;
+    }
+}
+
+/* Medium devices */
+@media screen and (min-width: 768px) {
+    .about-container {
+        margin: 40px 60px;
+    }
+
+    .sdg-container iframe {
+        margin: 50px auto;
+        width: 560px;
+        height: 315px;
+    }
+
+    .profile-row {
+        margin-top: 40px;
+    }
+
+    .profile-row img {
+        width: 100%;
+    }
+
+    .member-name {
+        font-size: 25px;
+    }
+
+    .member-role {
+        font-size: 20px;
+    }
+}
+
+/* Large devices */
+@media screen and (min-width: 992px) {
+    .about-container {
+        margin: 80px 150px;
+    }
+
+    .about-container .page-descr-heading {
+        text-align: center;
+    }
+
+    .sdg-container {
+        margin: 150px 0px;
+    }
+
+    .sdg-container iframe {
+        margin: 50px auto;
+        width: 672px;
+        height: 378px;
+    }
+
+    ul {
+        font-size: 16px;
+    }
+}
+
+/* Extra large devices */
+@media screen and (min-width: 1200px) {
+    .about-container {
+        margin: 80px 200px;
+    }
+
+    .sdg-container iframe {
+        margin: 50px auto;
+        width: 840px;
+        height: 472.5px;
+    }
 }

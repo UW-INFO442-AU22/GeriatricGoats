@@ -12,7 +12,6 @@ h1 {
 h2 {
     color: white;
     font-weight: 600;
-    margin: 0px 0px 30px 0px;
 }
 
 p {
@@ -22,10 +21,20 @@ p {
     line-height: 2em;
 }
 
+/* Buttons */
+.learn-more-btn {
+    width: 100%;
+    margin: 30px 0px;
+}
+
 /* Pages (e.g., Alerts, Commute, Safety) */
+.page-info-container {
+    margin: 100px 40px;
+    filter: drop-shadow(8px 8px 30px black);
+}
+
 .page-header {
     display: inline-block;
-    margin-bottom: 30px;
 }
 
 .page-header img,
@@ -44,19 +53,123 @@ p {
     font-weight: 500;
 }
 
-.header-heading {
+.page-descr-heading,
+.cards-header,
+.posts-header {
     color: white;
-    font-size: 55px;
+    font-size: 45px;
     font-weight: 600;
-    margin: 0px 0px 10px;
+    margin: 20px 0px;
+    text-align: center;
 }
 
-.page-description {
+.page-descr-subheading {
+    font-size: 30px;
+    text-align: center;
+}
+
+.page-description,
+.cards-description,
+.posts-description {
+    font-size: 18px;
+    line-height: 1.8em;
     text-align: left;
 }
 
-.post-title {
-    font-size: 28px;
-    font-weight: 400;
-    display: inline;
+.cards-container,
+.posts-container {
+    margin: 100px 40px;
+}
+
+.cards-stack {
+    margin: 10px 0px;
+}
+
+/* Responsive styling */
+/* Medium devices */
+@media screen and (min-width: 768px) {
+    .page-info-container {
+        margin: 100px 60px;
+    }
+
+    .page-descr-subheading {
+        font-size: 35px;
+    }
+
+    .page-description,
+    .cards-description,
+    .posts-description {
+        font-size: 20px;
+    }
+
+    .cards-container,
+    .posts-container {
+        margin: 0px 60px;
+    }
+
+    .cards-description,
+    .posts-description {
+        text-align: center;
+    }
+
+    .learn-more-btn {
+        width: 40%;
+    }
+}
+
+/* Large devices */
+@media screen and (min-width: 992px) {
+    .page-info-container {
+        margin: 100px 150px;
+    }
+
+    .page-descr-heading,
+    .cards-header,
+    .posts-header {
+        font-size: 55px;
+    }
+
+    .page-descr-heading {
+        text-align: left;
+    }
+
+    .page-descr-subheading {
+        font-size: 40px;
+    }
+
+    .page-description,
+    .cards-description,
+    .posts-description {
+        font-size: 22px;
+    }
+
+    .cards-container,
+    .posts-container {
+        margin: 200px 150px 100px;
+    }
+
+    .learn-more-btn {
+        width: 50%;
+        margin: 20px 0px;
+    }
+}
+
+/* Extra large devices */
+@media screen and (min-width: 1200px) {
+    .page-info-container {
+        margin: 100px 200px;
+    }
+
+    .page-descr-subheading {
+        font-size: 45px;
+    }
+
+    .cards-container,
+    .posts-container {
+        margin: 200px 200px 100px;
+    }
+
+    .learn-more-btn {
+        width: 45%;
+    }
 }

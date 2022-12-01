@@ -26,6 +26,7 @@ export const googleSignIn = async () => {
    } catch (e) {
      console.log(e.code, e.message)
    }
+   window.location="/";
    window.alert("You are now logged in");
  }
 

@@ -23,23 +23,23 @@
     text-align: center;
 }
 
-.overlay h1,
+.homepage-heading,
 .overlay p {
     max-width: 300px;
 }
 
-.overlay h1 {
+.homepage-heading {
     font-size: 35px;
-    font-weight: 700;
-    margin: 0px 0px 20px 0px;
+    font-weight: 600;
+    margin: 0px 0px 20px;
 }
 
 .overlay p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 200;
     line-height: 1.8em;
     color: white;
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 20px;
 }
 
 .overlay .btn.outline {
@@ -60,27 +60,42 @@
 /* Responsive styling */
 /* Small devices */
 @media screen and (min-width: 576px) {
-
-    .overlay h1,
+    .homepage-heading,
     .overlay p {
-        max-width: 460px;
+        max-width: 500px;
     }
 
-    .overlay h1 {
+    .homepage-heading {
         font-size: 40px;
     }
 }
 
 /* Medium devices */
 @media screen and (min-width: 768px) {
-
-    .overlay h1,
+    .homepage-heading,
     .overlay p {
         max-width: 600px;
     }
 
-    .overlay h1 {
-        font-size: 52px;
+    .homepage-heading {
+        font-size: 50px;
+    }
+
+    .overlay p {
+        font-size: 20px;
+        margin: 0px 0px 40px;
+    }
+}
+
+/* Large devices */
+@media screen and (min-width: 992px) {
+    .homepage-heading,
+    .overlay p {
+        max-width: 800px;
+    }
+
+    .homepage-heading {
+        font-size: 60px;
     }
 
     .overlay p {
@@ -88,19 +103,10 @@
     }
 }
 
-/* Large devices */
+/* Extra large devices */
 @media screen and (min-width: 992px) {
-
-    .overlay h1,
+    .homepage-heading,
     .overlay p {
-        max-width: 700px;
-    }
-
-    .overlay h1 {
-        font-size: 60px;
-    }
-
-    .overlay p {
-        font-size: 22px;
+        max-width: 900px;
     }
 }

@@ -26,8 +26,7 @@ const SignInModal = () => {
                         <button
                             className="btn btn-success mb-2"
                             onClick={() => signIn("google")}
-                            data-toggle="modal" data-target="#signInModal"
-                        >
+                            data-toggle="modal" data-target="#signInModal">
                             With Google
                         </button>
                         <br/>

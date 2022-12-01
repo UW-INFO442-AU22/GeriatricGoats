@@ -9,30 +9,30 @@
     background-repeat: no-repeat;
 }
 
-.header-container {
-    margin: 100px;
-}
-
-.cards-header {
-    color: white;
-    font-size: 55px;
-    text-align: center;
-    margin: 200px 0px 50px;
- }
-
 iframe {
     display: block;
     margin: auto;
+    width: 100%;
 }
 
-@media screen and (min-width: 820px) {
+.card-link {
+    color: #677189;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    padding: 0px 0px;
+    margin: 0px 0px;
+}
 
-    .header-container,
-    .cards-container {
-        margin: 90px 160px;
+/* Large devices */
+@media screen and (min-width: 992px) {
+    .description-content {
+        padding-right: 15px;
     }
 
-    iframe {
-        margin-left: 30px;
+    .youtube-vid {
+        padding-left: 15px;
+        display: inline-flex;
+        align-items: center;
     }
 }

@@ -8,7 +8,7 @@ export function Home() {
         <div>
             <div className="hero-image" aria-label="Suzzallo Library at night"> 
                 <div className="overlay">
-                    <h1>Stay Informed, Play It Safe, Make It Home.</h1>
+                    <h1 className="homepage-heading">Stay Informed, Play It Safe, Make It Home.</h1>
                     <p>
                         Track incidents near and around campus after dark through real-time reports and find resources to make safe commuting decisions.
                     </p>
