@@ -3,6 +3,7 @@ import { Col, Row } from "react-bootstrap";
 import campus from "./img/uw-campus.jpg"
 import banner from "./img/sdg11-banner.png"
 import jennifer from "./img/jennifer.png";
+import stella from "./img/stella.png";
 import logo from "./img/logo.svg";
 
 // About Us page
@@ -45,9 +46,9 @@ export function AboutUs() {
                      </ul>
                   </Col>
                   <Col>
-                     <img src={logo} alt="Stella Kim from GeriatricGoats"></img>
+                     <img src={stella} alt="Stella Kim from GeriatricGoats"></img>
                      <h3 className="member-name">Stella Kim</h3>
-                     <h4 className="member-role">Project Manager</h4>
+                     <h4 className="member-role">Product Manager</h4>
                      <ul>
                         <li>Informatics Student at the University of Washington</li>
                         <li className="grad-year">Class of 2023</li>
