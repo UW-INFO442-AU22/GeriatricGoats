@@ -5,6 +5,7 @@ import banner from "./img/sdg11-banner.png"
 import jennifer from "./img/jennifer.png";
 import stella from "./img/stella.png";
 import trinity from "./img/trinity.png";
+import cassie from "./img/cass.png";
 import logo from "./img/logo.svg";
 
 // About Us page
@@ -66,7 +67,7 @@ export function AboutUs() {
                   </Col>
 
                   <Col>
-                     <img src={logo} alt="Cassie Nguyen from GeriatricGoats"></img>
+                     <img src={cassie} alt="Cassie Nguyen from GeriatricGoats"></img>
                      <h3 className="member-name">Cassie Nguyen</h3>
                      <h4 className="member-role">Project Manager</h4>
                      <ul>
