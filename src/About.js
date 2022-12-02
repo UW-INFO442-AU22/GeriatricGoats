@@ -6,7 +6,7 @@ import jennifer from "./img/jennifer.png";
 import stella from "./img/stella.png";
 import trinity from "./img/trinity.png";
 import cassie from "./img/cass.png";
-import logo from "./img/logo.svg";
+import placeholder from "./img/profile-placeholder.png"
 
 // About Us page
 
@@ -33,8 +33,8 @@ export function AboutUs() {
                   allowfullscreen>
                </iframe>
             </div>
-            <h1 className="page-descr-heading">Who Are We?</h1>
-            <p className="page-description">We are GeriatricGoats, a team of five University of Washington students who are committed to developing technological solutions that improve the quality of life for all fellow Huskies.</p>
+            <h1 className="page-descr-heading">Who We Are</h1>
+            <p className="page-description">We are GeriatricGoats, a team of five University of Washington students who are committed to developing technological solutions that improve the quality of life for all university students, especially here at the University of Washington Seattle campus.</p>
             <div className="profiles-container">
                <h2 className="page-descr-subheading">Meet The Team</h2>
                <Row xs={1} md={3} lg={3} xl={5} className="profile-row g-6 d-flex justify-content-center">
@@ -76,7 +76,7 @@ export function AboutUs() {
                      </ul>
                   </Col>
                   <Col>
-                     <img src={logo} alt="Thomas Wilson from GeriatricGoats"></img>
+                     <img src={placeholder} alt="Thomas Wilson from GeriatricGoats"></img>
                      <h3 className="member-name">Thomas Wilson</h3>
                      <h4 className="member-role">UX Researcher</h4>
                      <ul>

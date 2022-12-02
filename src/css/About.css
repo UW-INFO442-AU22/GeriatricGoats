@@ -3,9 +3,11 @@
     margin: 40px 40px;
 }
 
-.sdg-container,
+.sdg-container {
+    margin: 50px 0px 150px;
+}
 .profiles-container {
-    margin: 100px 0px;
+    margin: 50px 0px;
 }
 
 .sdg-container img,
@@ -112,15 +114,11 @@ ul {
 /* Large devices */
 @media screen and (min-width: 992px) {
     .about-container {
-        margin: 80px 150px;
+        margin: 80px 100px;
     }
 
     .about-container .page-descr-heading {
         text-align: center;
-    }
-
-    .sdg-container {
-        margin: 150px 0px;
     }
 
     .sdg-container iframe {
@@ -137,7 +135,7 @@ ul {
 /* Extra large devices */
 @media screen and (min-width: 1200px) {
     .about-container {
-        margin: 80px 200px;
+        margin: 80px 150px;
     }
 
     .sdg-container iframe {
