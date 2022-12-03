@@ -1,7 +1,7 @@
 # Make It Home 🌙
 Make It Home is a web-based solution to help University of Washington students stay informed about non-life threatening incidents near and around campus after dark. We are providing a structured forum for students to provide timely safety updates and provide resources to make safe commuting decisions.
 
-Visit us at [Make It Home](https://make-it-home.web.app/).
+Visit us at [Make It Home](https://make-it-home-app.web.app/).
 
 ## Our Mission
 The goal of Make It Home is to address feelings of anxiety that have risen amongst University of Washington: Seattle campus students with a recent uptake in violent crime occurring around the UW neighborhood, particularly after dark. Through our application, we hope to empower students to make safer commuting choices while traversing through the University District by allowing them to share and access timely safety-related information.
