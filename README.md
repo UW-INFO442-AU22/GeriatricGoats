@@ -18,7 +18,7 @@ With the aim of increasing safety for UW students in the University District nei
 - Commuting resources (e.g., Night Ride, Husky NightWalk, etc.)
 - General safety resources for students
 
-![Alerts forum](https://raw.githubusercontent.com/jnd17/GeriatricGoats/master/.github/public/img/alerts-forum.png)
+![Make It Home mockup](public/img/mih-ui-mockup.png)
 
 # Developer Information
 ## Built With
