@@ -13,9 +13,9 @@ With the aim of increasing safety for UW students in the University District nei
 - Guided template when uploading posts
   - Incident title
   - Incident type (crime, advisory, other safety notices)
-  - Incident location - areas to avoid
+  - Incident location — areas to avoid
   - Incident time
-- Commuting resources (e.g., Night Ride, Husky NightWalk, etc.)
+- Commuting resources (e.g., NightRide, Husky NightWalk, etc.)
 - General safety resources for students
 
 ![Make It Home mockup](public/img/mih-ui-mockup.png)
