@@ -9,11 +9,6 @@
    background-repeat: no-repeat;
 }
 
-/* Top page content */
-/* .page-header, .commute-header-heading, #commute-page-description {
-   filter: drop-shadow(6px 6px 30px black);
-} */
-
 /* U-Pass content section */
 .upass-container {
    margin: 100px 40px;
@@ -39,17 +34,6 @@
 }
 
 /* Responsive styling */
-/* Small devices */
-/* @media screen and (min-width: 576px) {
-   .upass-container {
-      margin-top: 150px;
-   }
-
-   .commute-cards-header {
-      font-size: 50px;
-   }
-} */
-
 /* Medium devices */
 @media screen and (min-width: 768px) {
    .upass-container {

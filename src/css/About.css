@@ -1,146 +1,147 @@
 /* CSS used only for About Us page */
 .about-container {
-    margin: 40px 40px;
+   margin: 40px 40px;
 }
 
 .sdg-container {
-    margin: 50px 0px 150px;
+   margin: 50px 0px 150px;
 }
+
 .profiles-container {
-    margin: 50px 0px;
+   margin: 50px 0px;
 }
 
 .sdg-container img,
 .profile-row {
-    margin: 20px 0px;
+   margin: 20px 0px;
 }
 
 .sdg-container img {
-    width: 100%;
+   width: 100%;
 }
 
 .sdg-container iframe {
-    display: block;
-    margin: 20px auto;
-    width: 280px;
-    height: 157.5px;
+   display: block;
+   margin: 20px auto;
+   width: 280px;
+   height: 157.5px;
 }
 
 .profile-row {
-    text-align: center;
+   text-align: center;
 }
 
 .profile-row img {
-    width: 60%;
+   width: 60%;
 }
 
 .member-name {
-    color: #F6FF81;
-    font-weight: 400;
-    font-size: 26px;
-    margin: 20px 0px;
+   color: #F6FF81;
+   font-weight: 400;
+   font-size: 26px;
+   margin: 20px 0px;
 }
 
 .member-role {
-    color: white;
-    font-weight: 400;
-    font-size: 22px;
+   color: white;
+   font-weight: 400;
+   font-size: 22px;
 }
 
 ul {
-    list-style: none;
-    color: white;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 1.8em;
-    padding: 0px;
-    margin: 0px;
+   list-style: none;
+   color: white;
+   font-size: 18px;
+   font-weight: 200;
+   line-height: 1.8em;
+   padding: 0px;
+   margin: 0px;
 }
 
 .grad-year {
-    margin: 10px 0px;
+   margin: 10px 0px;
 }
 
 .references-heading {
-    color: #677189;
-    font-size: 16px;
-    font-weight: 500;
+   color: #677189;
+   font-size: 16px;
+   font-weight: 500;
 }
 
 .reference-citation {
-    color: #677189;
-    font-size: 12px;
+   color: #677189;
+   font-size: 12px;
 }
 
 /* Responsive styling */
 /* Extra large devices */
 @media screen and (min-width: 576px) {
-    .sdg-container iframe {
-        margin: 50px auto;
-        width: 448px;
-        height: 252px;
-    }
+   .sdg-container iframe {
+      margin: 50px auto;
+      width: 448px;
+      height: 252px;
+   }
 }
 
 /* Medium devices */
 @media screen and (min-width: 768px) {
-    .about-container {
-        margin: 40px 60px;
-    }
+   .about-container {
+      margin: 40px 60px;
+   }
 
-    .sdg-container iframe {
-        margin: 50px auto;
-        width: 560px;
-        height: 315px;
-    }
+   .sdg-container iframe {
+      margin: 50px auto;
+      width: 560px;
+      height: 315px;
+   }
 
-    .profile-row {
-        margin-top: 40px;
-    }
+   .profile-row {
+      margin-top: 40px;
+   }
 
-    .profile-row img {
-        width: 100%;
-    }
+   .profile-row img {
+      width: 100%;
+   }
 
-    .member-name {
-        font-size: 25px;
-    }
+   .member-name {
+      font-size: 25px;
+   }
 
-    .member-role {
-        font-size: 20px;
-    }
+   .member-role {
+      font-size: 20px;
+   }
 }
 
 /* Large devices */
 @media screen and (min-width: 992px) {
-    .about-container {
-        margin: 80px 100px;
-    }
+   .about-container {
+      margin: 80px 100px;
+   }
 
-    .about-container .page-descr-heading {
-        text-align: center;
-    }
+   .about-container .page-descr-heading {
+      text-align: center;
+   }
 
-    .sdg-container iframe {
-        margin: 50px auto;
-        width: 672px;
-        height: 378px;
-    }
+   .sdg-container iframe {
+      margin: 50px auto;
+      width: 672px;
+      height: 378px;
+   }
 
-    ul {
-        font-size: 16px;
-    }
+   ul {
+      font-size: 16px;
+   }
 }
 
 /* Extra large devices */
 @media screen and (min-width: 1200px) {
-    .about-container {
-        margin: 80px 150px;
-    }
+   .about-container {
+      margin: 80px 150px;
+   }
 
-    .sdg-container iframe {
-        margin: 50px auto;
-        width: 840px;
-        height: 472.5px;
-    }
+   .sdg-container iframe {
+      margin: 50px auto;
+      width: 840px;
+      height: 472.5px;
+   }
 }

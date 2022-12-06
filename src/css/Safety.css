@@ -1,38 +1,39 @@
 /* CSS used only for Safety page */
 .safety-body {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    background-size: cover;
-    background-position: center top;
-    background-image: url('~/public/img/people.png');
-    background-repeat: no-repeat;
+   height: 100vh;
+   width: 100vw;
+   position: relative;
+   background-size: cover;
+   background-position: center top;
+   background-image: url('~/public/img/people.png');
+   background-repeat: no-repeat;
 }
 
 iframe {
-    display: block;
-    margin: auto;
-    width: 100%;
+   display: block;
+   margin: auto;
+   width: 100%;
 }
 
 .card-link {
-    color: #9FA7B7;
-    font-size: 18px;
-    font-weight: 300;
-    text-align: center;
-    padding: 0px 0px;
-    margin: 0px 0px;
+   color: #9FA7B7;
+   font-size: 18px;
+   font-weight: 300;
+   text-align: center;
+   padding: 0px 0px;
+   margin: 0px 0px;
 }
 
+/* Responsive styling */
 /* Large devices */
 @media screen and (min-width: 992px) {
-    .description-content {
-        padding-right: 15px;
-    }
+   .description-content {
+      padding-right: 15px;
+   }
 
-    .youtube-vid {
-        padding-left: 15px;
-        display: inline-flex;
-        align-items: center;
-    }
+   .youtube-vid {
+      padding-left: 15px;
+      display: inline-flex;
+      align-items: center;
+   }
 }

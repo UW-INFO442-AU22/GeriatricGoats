@@ -11,20 +11,20 @@ import { AboutUs } from "./About";
 import { LogOutPage } from "./LogOutPage";
 
 export function App() {
-  return (
-    <div>
-      <NavbarMenu />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="alerts" element={<Alerts />} />
-        <Route path="commute" element={<Commute />} />
-        <Route path="safety" element={<Safety />} />
-        <Route path="about" element={<AboutUs />} />
-        <Route path="logout" element={<LogOutPage />} />
-      </Routes>
-      <Footer />
-    </div>
-  );
+   return (
+      <div>
+         <NavbarMenu />
+         <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="alerts" element={<Alerts />} />
+            <Route path="commute" element={<Commute />} />
+            <Route path="safety" element={<Safety />} />
+            <Route path="about" element={<AboutUs />} />
+            <Route path="logout" element={<LogOutPage />} />
+         </Routes>
+         <Footer />
+      </div>
+   );
 }
 
 export default App;

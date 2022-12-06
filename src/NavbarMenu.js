@@ -1,6 +1,6 @@
 import "./css/NavbarMenu.css";
-import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import logo from "./img/logo.svg";
+import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import { googleSignIn } from "./LogIn";
 import { signMeOut } from "./SignOut";
 import { initializeApp } from 'firebase/app';
@@ -18,7 +18,6 @@ const firebaseConfig = {
    appId: "1:1003220503069:web:2e51d240ecd85cbf6754f4"
 };
 const app = initializeApp(firebaseConfig);
-
 
 // Navigation menu at the top of every page
 function NavbarMenu() {

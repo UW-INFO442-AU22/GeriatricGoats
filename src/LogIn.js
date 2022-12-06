@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
-// Initializing FB app:
+// Initializing FB app
 const firebaseConfig = {
    apiKey: "AIzaSyC3_6IAbYBbJiGzXGK8WVOXIkxAmtUoY0w",
    authDomain: "make-it-home-app.firebaseapp.com",
@@ -12,23 +12,21 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 
-
-
-// DO NOT TOUCH!!!
+// Google sign-in pop-up modal
 const auth = getAuth(app) // import auth instance 
 export const googleSignIn = async () => {
    try {
-     const provider = new GoogleAuthProvider();
-     const result = await signInWithPopup(auth, provider)
-     const credential = GoogleAuthProvider.credentialFromResult(result);
-     const token = credential.accessToken;
-     console.log(credential)
+      const provider = new GoogleAuthProvider();
+      const result = await signInWithPopup(auth, provider)
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential.accessToken;
+      console.log(credential)
    } catch (e) {
-     console.log(e.code, e.message)
+      console.log(e.code, e.message)
    }
-   window.location="/";
+   window.location = "/";
    window.alert("You are now logged in");
- }
+}
 
 
 

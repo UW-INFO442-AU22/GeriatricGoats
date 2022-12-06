@@ -11,7 +11,7 @@ function Footer() {
             <span>&copy; 2022 UW INFO 442 Team 7: GeriatricGoats • All rights reserved</span>
          </div>
       </footer>
-   )
+   );
 }
 
 export default Footer;

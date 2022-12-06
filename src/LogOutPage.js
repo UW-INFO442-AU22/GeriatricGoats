@@ -8,5 +8,5 @@ export function LogOutPage() {
             <h1 className="logout-heading">See you tomorrow night!</h1>
          </div>
       </div>
-   )
+   );
 }

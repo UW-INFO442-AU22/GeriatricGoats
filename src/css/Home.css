@@ -1,112 +1,116 @@
 /* CSS used only for home page */
 .hero-image {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-image: url('~/public/img/suzzallo-monochrome.jpeg');
+   height: 100vh;
+   width: 100vw;
+   position: relative;
+   background-size: cover;
+   background-position: 50% 50%;
+   background-image: url('~/public/img/suzzallo-monochrome.jpeg');
 }
 
 .overlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.65);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   top: 0;
+   left: 0;
+   background: rgba(0, 0, 0, 0.65);
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
 }
 
 .homepage-heading,
 .overlay p {
-    max-width: 300px;
+   max-width: 300px;
 }
 
 .homepage-heading {
-    font-size: 35px;
-    font-weight: 600;
-    margin: 0px 0px 20px;
+   font-size: 35px;
+   font-weight: 600;
+   margin: 0px 0px 20px;
 }
 
 .overlay p {
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 1.8em;
-    color: white;
-    margin: 0px 0px 20px;
+   font-size: 18px;
+   font-weight: 200;
+   line-height: 1.8em;
+   color: white;
+   margin: 0px 0px 20px;
 }
 
 .overlay .btn.outline {
-    background: none;
-    padding: 12px 22px;
+   background: none;
+   padding: 12px 22px;
 }
 
 .overlay .btn-primary.outline {
-    border: 2px solid #F6FF81;
-    color: #F6FF81;
+   border: 2px solid #F6FF81;
+   color: #F6FF81;
 }
 
 .btn-primary.outline:hover {
-    color: #161B21;
-    background-color: #F6FF81;
+   color: #161B21;
+   background-color: #F6FF81;
 }
 
 /* Responsive styling */
 /* Small devices */
 @media screen and (min-width: 576px) {
-    .homepage-heading,
-    .overlay p {
-        max-width: 500px;
-    }
 
-    .homepage-heading {
-        font-size: 40px;
-    }
+   .homepage-heading,
+   .overlay p {
+      max-width: 500px;
+   }
+
+   .homepage-heading {
+      font-size: 40px;
+   }
 }
 
 /* Medium devices */
 @media screen and (min-width: 768px) {
-    .homepage-heading,
-    .overlay p {
-        max-width: 600px;
-    }
 
-    .homepage-heading {
-        font-size: 50px;
-    }
+   .homepage-heading,
+   .overlay p {
+      max-width: 600px;
+   }
 
-    .overlay p {
-        font-size: 20px;
-        margin: 0px 0px 40px;
-    }
+   .homepage-heading {
+      font-size: 50px;
+   }
+
+   .overlay p {
+      font-size: 20px;
+      margin: 0px 0px 40px;
+   }
 }
 
 /* Large devices */
 @media screen and (min-width: 992px) {
-    .homepage-heading,
-    .overlay p {
-        max-width: 800px;
-    }
 
-    .homepage-heading {
-        font-size: 60px;
-    }
+   .homepage-heading,
+   .overlay p {
+      max-width: 800px;
+   }
 
-    .overlay p {
-        font-size: 22px;
-    }
+   .homepage-heading {
+      font-size: 60px;
+   }
+
+   .overlay p {
+      font-size: 22px;
+   }
 }
 
 /* Extra large devices */
 @media screen and (min-width: 992px) {
-    .homepage-heading,
-    .overlay p {
-        max-width: 900px;
-    }
+
+   .homepage-heading,
+   .overlay p {
+      max-width: 900px;
+   }
 }

@@ -1,139 +1,139 @@
 /* CSS used only for Alerts page */
 .alerts-body {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-image: url('~/public/img/quad-walk.png');
-    background-repeat: no-repeat;
+   height: 100vh;
+   width: 100vw;
+   position: relative;
+   background-size: cover;
+   background-position: 50% 50%;
+   background-image: url('~/public/img/quad-walk.png');
+   background-repeat: no-repeat;
 }
 
 /* Create post button */
 .create-post-btn {
-    width: 100%;
-    margin: 20px 0px;
+   width: 100%;
+   margin: 20px 0px;
 }
 
 .btn-container {
-    text-align: center;
+   text-align: center;
 }
 
 .btn {
-    border-radius: 50px;
+   border-radius: 50px;
 }
 
 .btn-primary.outline {
-    color: #F6FF81;
-    border: 2px solid #F6FF81;
-    background-color: transparent;
+   color: #F6FF81;
+   border: 2px solid #F6FF81;
+   background-color: transparent;
 }
 
 .btn-primary.outline:hover {
-    color: #161B21;
-    background-color: #F6FF81;
+   color: #161B21;
+   background-color: #F6FF81;
 }
 
 /* Posts cards */
 .post-cards-container {
-    border: transparent;
-    margin-bottom: 40px;
+   border: transparent;
+   margin-bottom: 40px;
 }
 
 .post-cards-body {
-    padding: 0px;
+   padding: 0px;
 }
 
 .post-card {
-    background-color: #161B21;
-    margin: 8px 0;
-    border-color: #2F343A;
-    border-width: 2px;
-    border-radius: 10px;
+   background-color: #161B21;
+   margin: 8px 0;
+   border-color: #2F343A;
+   border-width: 2px;
+   border-radius: 10px;
 }
 
 #post-header {
-    color: #677189;
-    font-size: 18px;
-    font-weight: 400;
-    text-align: left;
-    padding: 20px 24px;
+   color: #677189;
+   font-size: 18px;
+   font-weight: 400;
+   text-align: left;
+   padding: 20px 24px;
 }
 
 .post-text {
-    padding-top: 10px;
+   padding-top: 10px;
 }
 
 .post-text.card-text {
-    margin-left: 10px;
+   margin-left: 10px;
 }
 
 .post-title-container {
-    display: inline-block;
+   display: inline-block;
 }
 
 .row {
-    margin-left: 0px;
+   margin-left: 0px;
 }
 
 .post-title {
-    color: white;
-    font-size: 28px;
-    font-weight: 400;
-    padding-left: 0px;
-    display: inline;
+   color: white;
+   font-size: 28px;
+   font-weight: 400;
+   padding-left: 0px;
+   display: inline;
 }
 
 .post-tag {
-    color: #294642;
-    font-size: 15px;
-    font-weight: 500;
-    background-color: #b5ebe3;
-    padding: 8px 18px;
-    border-radius: 20px;
-    margin-left: 15px;
-    display: inline;
+   color: #294642;
+   font-size: 15px;
+   font-weight: 500;
+   background-color: #b5ebe3;
+   padding: 8px 18px;
+   border-radius: 20px;
+   margin-left: 15px;
+   display: inline;
 }
 
 .post-location {
-    color: #677189;
-    font-size: 20px;
-    font-weight: 300;
-    margin: 10px 0;
-    padding-left: 0px;
+   color: #677189;
+   font-size: 20px;
+   font-weight: 300;
+   margin: 10px 0;
+   padding-left: 0px;
 }
 
 /* Pop-up post form */
 .cancel-btn {
-    margin: 10px 0 10px 10px;
+   margin: 10px 0 10px 10px;
 }
 
 .submit-btn {
-    margin: 10px;
+   margin: 10px;
 }
 
 /* Responsive styling */
 /* Medium devices */
 @media screen and (min-width: 768px) {
-    .create-post-btn {
-        width: 40%;
-    }
+   .create-post-btn {
+      width: 40%;
+   }
 }
 
 /* Large devices */
 @media screen and (min-width: 992px) {
-    .btn-container {
-        text-align: left;
-    }
+   .btn-container {
+      text-align: left;
+   }
 
-    .create-post-btn {
-        width: 40%;
-    }
+   .create-post-btn {
+      width: 40%;
+   }
 }
 
 /* Extra large devices */
 @media screen and (min-width: 1200px) {
-    .create-post-btn {
-        width: 30%;
-    }
+   .create-post-btn {
+      width: 30%;
+   }
 }
